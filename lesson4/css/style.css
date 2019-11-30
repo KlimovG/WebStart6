@@ -1,0 +1,83 @@
+body {
+  background-color: #ffba81;
+  margin: 20px;
+}
+h1,h2,h3 {
+  text-align: center;
+
+}
+p {
+  font-size: 18px;
+  padding: 20px;
+
+}
+#note1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.txt_intro {
+  margin: 20px 0 0 20px;
+  font-size: 20px;
+  border-style: solid;
+  border-color: #e67225;
+  border-radius: 10px;
+  background-color: #e8bfab;
+  font-style: italic;
+
+}
+.bold {
+  font-weight: 900;
+}
+.italic {
+   font-style: italic;
+}
+.under {
+  text-decoration: underline;
+}
+.line-t {
+  text-decoration: line-through;
+}
+.chapter {
+  margin: 20px 0 0 20px;
+  padding: 20px;
+  border-style: solid;
+  border-color: #e67225;
+  border-radius: 10px;
+  background-color: #ffd5ae;
+}
+.img1 {
+  float: left;
+  height: auto;
+  width: 450px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.img2 {
+  float: right;
+  height: auto;
+  width: 450px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.menu {
+  position: fixed;
+  right: 50px;
+  padding: 15px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color:  #7ce85e;
+  background-color: #c9ffac;
+}
+button {
+  position: fixed;
+  left: 40%;
+  bottom: 50px;
+  padding: 15px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #cc7e4a;
+  border-width: 5px;
+  background-color: #ffc891;
+  font-size: 14px;
+}

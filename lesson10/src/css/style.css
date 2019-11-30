@@ -1,0 +1,154 @@
+*{
+  color: #32325f;
+  font-family: "Helvetica Neue" !important;
+}
+.name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #95989a !important;
+  text-transform: uppercase;
+}
+.hero {
+  padding-top: 75px;
+  background-color: #f4f5f7;
+}
+.navbar {
+  padding: 0;
+  background-color: #f4f5f7 !important;
+}
+.social {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social img {
+  margin-right: 15px;
+  height: 30px;
+  width: auto;
+}
+.main {
+  padding-top: 110px;
+  padding-bottom: 190px;
+  background-color: #f4f5f7;
+}
+.main img {
+  width: 100%;
+}
+.subtitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.title {
+  margin-top: 14px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.description {
+  margin-top: 26px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.price-tag {
+  margin-top: 16px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.price {
+  margin-top: 10px;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.buttons {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.btn {
+  /* margin-right: 30px; */
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  outline: none;
+}
+
+.btn-success {
+  background-color: #2dce89;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #5e72e4;
+  border: none;
+}
+
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.section-subtitle {
+  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: 400;
+
+}
+.section-title {
+  font-size: 48px;
+  font-weight: 700;
+}
+.about-card img {
+  height: 85px;
+}
+.about-card p {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.about-row {
+  margin-top: 100px;
+}
+.people {
+  background-color: #f4f5f7;
+}
+.people-row {
+  margin-top: 64px;
+}
+
+.people-card {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.people-img {
+  width: 100%;
+}
+.foot {
+  background-color: #32325f;
+  padding: 78px 0 100px;
+}
+.footer-title {
+  margin-bottom: 34px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.footer-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+.foot-link {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+}
+.foot-link:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  font-family: Tahoma;
+}
+
+body {
+  /* background-color: #5579fe; */
+  background: url(../img/dot-grid.png) repeat;
+  background-color: rgba(85, 121, 254, 0.5);
+  background-blend-mode: multiply;
+  /* background-size: auto; */
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.intro {
+  font-size: 30px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-ga {
+  background-image: linear-gradient(#FE5568 50%, #FE5568 50%), linear-gradient(silver 50%, silver 50%); 
+  background-position: center bottom; 
+  background-repeat: no-repeat; 
+  background-size: 0 2px, 100% 2px; 
+  color: #1E3A52; 
+  padding-bottom: 3px; 
+  }
+  .link-ga:hover {
+  background-size: 100% 2px, 100% 2px;
+  transition: .5s  ease-in-out;
+  color: #FE5568;
+  }
+
+
+/* Tabs */
+
+.tabs { 
+  width: 100%; 
+  padding: 0px; 
+  margin: 0 auto; 
+  text-align: center;
+}
+
+.tabs>input { 
+  display: none; 
+}
+
+.tabs>div {
+    display: none;
+    padding: 12px;
+    /* border: 1px solid #C0C0C0; */
+    background: #FE5568;
+}
+
+.tabs>label {
+    display: inline-block;
+    width: 200px;
+    padding: 15px;
+    margin: 0 -5px 0px 0;
+    text-align: center;
+    color: #666666;
+    /* border: 1px solid #C0C0C0; */
+    background: #cccccc;
+    cursor: pointer;
+}
+
+.tabs>input:checked + label {
+    color: #000000;
+    /* border: 1px solid #C0C0C0; */
+    /* border-bottom: 1px solid #FE5568; */
+    background: #FE5568;
+    transition: .5s  ease-in-out;
+    color: #FFFFFF;
+}
+
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
+#tab_3:checked ~ #txt_3,
+#tab_4:checked ~ #txt_4,
+#tab_5:checked ~ #txt_5 { display: block; }
+
+/* Homeworks Styles */
+
+.homeworks {
+  display: flex;
+  /* justify-content: center; */
+  width: 70%;
+  margin: auto;
+}
+
+.week {
+  display: flex;
+  width: auto;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  /* justify-content: flex-start; */
+} 
+
+.homeworks_btn {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  width: 600px;
+  height: 70px;
+  border: none;
+  background: #cccccc;
+  outline: none;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+}
+
+button:hover {
+  background-size: 100% 2px, 100% 2px;
+  transition: .5s  ease-in-out;
+  background-color: #94abfe;
+  color: #ffffff;
+  box-shadow: 2px 5px 5px rgba(0,0,0,0.7);
+  border: none;
+  transform: scaleX(0.98) scaleY(0.98);
+}
+
+.homeworks-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  width: 100%;
+  height: 70px;
+}
+
+.homeworks-link:hover {
+  transition: .5s  ease-in-out;
+  color: #ffffff;
+}
+
+.homeworks_eh {
+  width: 50%;
+  height: 100%;
+  border: none;
+  background: #cccccc;
+  outline: none;
+}
+
+.homeworks_eh:first-child {
+  border-right: #FE5568 solid 3px;
+} 
+
+.homeworks_eh:last-child {
+
+  border-left: #FE5568 solid 3px;
+}

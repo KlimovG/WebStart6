@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  font-family: Tahoma;
+}
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  /* line-height: 27; */
+  text-align: center;
+}
+
+button {
+  outline: none;
+}
+
+.head {
+  width: 1367px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.book {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 40%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55%;
+  height: 600px;
+  margin: auto;
+  padding-right: 100px;
+}
+
+.name {
+  margin-top: 15px;
+  margin-bottom: 35px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.book-info {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.book-price {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.bookt-btn {
+
+}
+
+.buy {
+  width: 175px;
+  height: 67px;
+  margin-right: 40px;
+  border-radius: 5px;
+  border: 2px solid #f05a22;
+  background-color: #ffffff;
+  color: #f05a22;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 27px;
+  outline: none;
+}
+
+.buy:hover {
+  color: #ffffff;
+  background-color: #f05a22;
+  transition: .5s  ease-in-out;
+}
+
+.about {
+  width: 287px;
+  height: 67px;
+  border-radius: 5px;
+  border: 2px solid #f05a22;
+  background-color: #fff;
+  color: #f05a22;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.about:hover {
+  color: #ffffff;
+  background-color: #f05a22;
+  transition: .5s  ease-in-out;
+}
+
+.section1 {
+  display: flex;
+  margin-top: 100px;
+  height: 400px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+
+.delivery {
+  width: 1366px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 230px;
+}
+
+.card-img {
+  height: 55px;
+  width: auto;
+}
+
+.card-info {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.buyers {
+  margin-top: 90px;
+  margin-bottom: 111px;
+}
+
+.buyers h2 {
+  margin-bottom: 70px;
+}
+
+.b-container {
+  width: 1366px;
+  height: 580px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 0 100px;
+}
+
+.buyer-img {
+  margin: auto;
+  width: 261px;
+  height: 261px;
+}
