@@ -1,0 +1,27 @@
+{
+  "name": "webstart6",
+  "version": "1.0.0",
+  "description": "Homeworks from WebStart6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KlimovG/WebStart6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KlimovG/WebStart6/issues"
+  },
+  "homepage": "https://github.com/KlimovG/WebStart6#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}

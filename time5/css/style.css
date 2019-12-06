@@ -1,0 +1,70 @@
+/* Fonts */
+@font-face {
+	font-family: 'Bad Script';
+	src: url('../fonts/BadScript/BadScript-Regular.eot');
+	src: local('../fonts/BadScript/Bad Script Regular'),
+	local('../fonts/BadScript/BadScript-Regular'),
+		url('../fonts/BadScript/BadScript-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BadScript/BadScript-Regular.woff') format('woff'),
+		url('../fonts/BadScript/BadScript-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Bebas Reg';
+	src: url('../fonts/BebasNeue/');
+	src: local('../fonts/BebasNeue/Bebas Neue Regular'), local('../fonts/BebasNeue/BebasNeueRegular'),
+		url('../fonts/BebasNeue/?#iefix') format('embedded-opentype'),
+		url('../fonts/BebasNeue/BebasNeueRegular.woff') format('woff'),
+		url('../fonts/BebasNeue/BebasNeueRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans/OpenSans-Regular.eot');
+	src: local('../fonts/OpenSans/Open Sans Regular'), local('../fonts/OpenSans/OpenSans-Regular'),
+		url('../fonts/OpenSans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/OpenSans/OpenSans-Regular.woff') format('woff'),
+		url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lobster';
+	src: url('../fonts/Lobster/');
+	src: local('../fonts/Lobster/Lobster Regular'), local('../fonts/Lobster/Lobster'),
+		url('../fonts/Lobster/?#iefix') format('embedded-opentype'),
+		url('../fonts/Lobster/Lobster.woff') format('woff'),
+		url('../fonts/Lobster/Lobster.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.text-box{
+	padding-top: 2rem;
+}
+.result {
+	margin-bottom: 0;
+	margin-top: 3rem;
+}
+.fonts {
+	font-size: 2rem;
+	text-align: center;
+	padding: 2rem;
+}
+small {
+	font-size: 1.3rem;
+}
+#badScript {
+	font-family: 'Bad Script';
+}
+#bebasReg {
+	font-family: 'Bebas Reg';
+}
+#lobster {
+	font-family: 'Lobster';
+}
+#openSans{
+	font-family: 'Open Sans';
+}

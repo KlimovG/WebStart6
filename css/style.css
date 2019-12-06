@@ -48,7 +48,9 @@ a {
   margin: 0 auto; 
   text-align: center;
 }
-
+.tabs:hover {
+  
+}
 .tabs>input { 
   display: none; 
 }
@@ -160,3 +162,4 @@ button:hover {
 
   border-left: #FE5568 solid 3px;
 }
+/* 3D CSS */

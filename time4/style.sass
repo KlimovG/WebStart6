@@ -1,0 +1,149 @@
+$base: #33aaff
+$fz: 18px
+body, p, h1, h2, h3, h4 
+  margin: 0
+  padding: 0
+  font-family: Arial, Helvetica, sans-serif
+.header
+  background-color: darken($base, 50.00)
+  padding: 15px 0
+  color: lighten(desaturate(adjust-hue($base, -205), 100.00), 40.00)
+  &__title
+    font-size: $fz
+    font-weight: 700
+    line-height: 47px
+  &__callback
+    text-align: right
+.section
+  padding: 70px 0
+  text-align: center
+  &__title
+    font-size: $fz*2
+    font-weight: 700
+    color: darken($base, 50.00)
+    & span
+      color: adjust-hue($base, 150)
+  &__underline
+    margin: 10px auto
+    width: 200px
+    height: 2px
+    background-color: $base
+.coral
+  color: adjust-hue($base, 150)
+.main
+  background-color: lighten($base, 30.00)
+  position: relative
+  & h1 
+    margin-bottom: 25px
+    font-size: $fz*3+6
+    font-weight: 300
+    text-transform: uppercase
+    color: darken($base, 50.00)
+  & .sep
+    margin: 25px auto
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    background-color: lighten(desaturate(adjust-hue($base, -205), 100.00), 40.00)
+  & h3 
+    font-size: $fz*2
+    font-weight: 300
+    color: darken($base, 50.00)
+  &__location
+    margin: 24px auto 21px
+    width: 300px
+    height: 64px
+    font-size: $fz
+    line-height: 64px
+    color: $base
+    border: 1px solid darken($base, 50.00)
+  & .comment
+    margin-top: 55px
+    color: desaturate(adjust-hue($base, -205), 100.00)
+    font-size: $fz - 4
+    line-height: 18px
+.problems
+  &__list
+    text-align: left
+    & ul
+      list-style: none
+      & li
+        min-height: 100px
+        font-size: $fz
+        font-weight: 300
+        color: darken($base, 50.00)
+        &::before
+          position: relative
+          right: 30px
+          top: 25px
+          content: ''
+          display: block
+          width: 20px
+          height: 20px
+          background-color: $base
+          border-radius: 50%
+  &__wrapper
+    margin: 0 auto
+    padding: 30px
+    max-width: 700px
+    border: 2px solid $base
+    & p
+      margin-bottom: 10px
+      font-size: $fz + 6
+      color: darken($base, 50.00)
+.prove
+  background-color: lighten($base, 30.00)
+  &__img
+    margin: 25px auto 10px
+    min-height: 70px
+  & img
+    border-bottom: 1px solid $base
+.footer
+  padding: 15px 0
+  font-size: $fz - 4
+  font-weight: 300
+  background-color: darken($base, 50.00)
+  &__left
+    color: desaturate($base, 50.00)
+    opacity: 0.5
+  &__right
+    text-align: right
+    color: $base
+    & a
+      color: $base
+      text-decoration: none
+      &:hover 
+        text-decoration: underline
+.button 
+  padding: 10px 30px
+  display: inline-block
+  cursor: pointer
+  font-size: $fz - 4
+  font-weight: 700
+  text-align: center
+  text-transform: uppercase
+  color: lighten(desaturate(adjust-hue($base, -205), 100.00), 40.00)
+  background-color: adjust-hue($base, 150)
+  border: 1px solid adjust-hue($base, 150)
+  border-radius: 25px
+  &__start
+    margin-top: 20px
+  &:hover
+      box-shadow: 0 0 25px desaturate(adjust-hue($base, -205), 100.00)
+      background-color: $base
+      border: 1px solid lighten($base, 30.00)
+  &:focus
+    outline: none
+
+
+
+
+
+
+
+  
+
+  
+
+  
+

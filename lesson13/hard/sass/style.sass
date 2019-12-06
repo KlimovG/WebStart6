@@ -1,0 +1,61 @@
+$primary: #009adf
+$dark: #666666
+$lh: 16px
+$fz: 10px
+
+.footer
+  margin-top: 60px
+  background-color: darken($dark, 32.55)
+  padding: 59px 0
+  color: $dark
+  &-policy
+    &-link
+      font-size: 12px
+  p
+    margin-bottom: 14px
+  a 
+    color: $dark 
+    text-decoration: none
+    &:hover
+      color: lighten( $primary, 56.27450980392157 )
+  small
+    display: block
+    margin-top: 56px
+    line-height: $lh
+    font-size: $fz
+    max-width: 80%
+  ul 
+    padding: 0
+    list-style: none
+    & li 
+      line-height: $lh*2
+  &-contacts &-social-links
+    text-align: right
+  &-contacts
+    &_phone
+      font-weight: 400
+      font-size: $fz*2
+      color: $primary
+  &-social
+    &-links
+      & li 
+        display: inline-block
+        & a
+          display: inline-block
+          width: 42px
+          height: 42px
+          background-color: rgba(lighten(desaturate(adjust-hue($primary, -199), 100.00), 56.27), 0.1)
+          text-align: center
+          border-radius: 50%
+          line-height: $lh*2+10
+          margin-left: 10px
+          -webkit-transition: all 0.2s
+          transition: all 0.2s
+          &:hover
+            background-color: rgba(lighten(desaturate(adjust-hue($primary, -199), 100.00), 56.27), 0.9)
+            color: darken($dark, 32.55)
+
+            
+
+          
+
