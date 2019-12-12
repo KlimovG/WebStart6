@@ -2,13 +2,13 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   const modal = document.querySelector('.modal');
   const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close')
-  // const switchModal = () => {
-  //   modal.classList.toggle('modal--visible');
-  // }
-  // modalBtn.forEach(element => {
-  //   element.addEventListener('click', switchModal);
-  // });
+  // const closeBtn = document.querySelector('.modal__close')
+  const switchModal = () => {
+    modal.classList.toggle('modal--visible');
+  }
+  modalBtn.forEach(element => {
+    element.addEventListener('click', switchModal);
+  });
 
   // modal.addEventListener('click', switchModal);
   
@@ -24,15 +24,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 toggleModal = () => {
   const modal = document.querySelector('.modal'),
-        modalBtn = document.querySelector('.button__modal'),
+        // modalBtn = document.querySelectorAll('.button__modal'),
         modalClose = document.querySelector('.modal__close');
 
-        modalBtn.addEventListener('click', (event) => {
-          let target = event.target;
-          if (target.classList.contains('button__modal')) {
-            showModal();
-          }
-        });
+        // modalBtn.addEventListener('click', (event) => {
+        //   let target = event.target;
+        //   if (target.classList.contains('button__modal')) {
+        //     showModal();
+        //   }
+        // });
         modalClose.addEventListener('click', (event) => {
           let target = event.target;
           if (target.classList.contains('modal__close')) {
