@@ -32,6 +32,7 @@ a {
   background-size: 0 2px, 100% 2px; 
   color: #1E3A52; 
   padding-bottom: 3px; 
+  
   }
   .link-ga:hover {
   background-size: 100% 2px, 100% 2px;
@@ -112,17 +113,18 @@ a {
   display: flex;
   justify-content: center;
   margin: 20px;
-  width: 600px;
+  width: 40%;
   height: 70px;
   border: none;
   background: #cccccc;
   outline: none;
   box-shadow: 0 10px 10px rgba(0,0,0,0.5);
 }
-
+button {
+  transition: .5s  ease-in-out;
+}
 button:hover {
   background-size: 100% 2px, 100% 2px;
-  transition: .5s  ease-in-out;
   background-color: #94abfe;
   color: #ffffff;
   box-shadow: 2px 5px 5px rgba(0,0,0,0.7);

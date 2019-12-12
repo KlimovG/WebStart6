@@ -716,6 +716,7 @@ img {
 
 .types__section-title {
   margin-bottom: 2rem;
+  font-size: 0.95rem;
 }
 
 .row {
@@ -731,13 +732,14 @@ img {
 }
 
 .col {
-  -ms-flex-preferred-size: 31.8%;
-      flex-basis: 31.8%;
+  -ms-flex-preferred-size: 32.7%;
+      flex-basis: 32.7%;
 }
 
 .card__image {
   display: block;
-  width: 100%;
+  height: 90%;
+  width: auto;
   margin: auto;
 }
 
@@ -745,8 +747,8 @@ img {
   position: relative;
   max-width: 23.6rem;
   margin: 0 auto;
-  margin-top: -9.3rem;
-  padding: 1.79rem 2.14rem;
+  margin-top: -9.1rem;
+  padding: 2rem 2.14rem;
   background-color: #fff;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
@@ -756,15 +758,15 @@ img {
   font-family: 'Yeseva One', cursive;
   font-size: 1.29rem;
   margin-top: -0.2rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.8rem;
 }
 
 .card__list {
   padding: 0 0 0 1rem;
   margin: 0;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.1rem;
   font-size: 1.07rem;
-  line-height: 1.79rem;
+  line-height: 1.9rem;
   color: #959595;
 }
 
@@ -772,6 +774,7 @@ img {
   position: absolute;
   left: 0;
   bottom: -1.79rem;
+  min-width: 228px;
   font-size: 1.29rem;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
@@ -795,7 +798,7 @@ img {
 
 .design__section-title {
   color: #ffffff;
-  margin-bottom: 2.78rem;
+  margin-bottom: 2.8rem;
 }
 
 .design__card {
@@ -888,20 +891,24 @@ img {
     color: #131313;
     font-size: 1.4rem;
     max-width: 52rem;
+    margin-top: 1.4rem;
+    margin-bottom: 3.2rem;
+    letter-spacing: 0.15px;
+    line-height: 1.4;
   }
   .design__section-title {
     color: #131313;
   }
   .design__card-image {
     display: block;
-    width: 100%;
+    width: 98%;
     margin: auto;
   }
   .design__card-text {
     position: relative;
     max-width: 23.6rem;
     margin: 0 auto;
-    margin-top: -9.3rem;
+    margin-top: -9.1rem;
     padding: 1.79rem 2.14rem;
     background-color: #fff;
     -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
@@ -914,12 +921,15 @@ img {
     margin-bottom: 0.7rem;
   }
   .design__card-list {
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 1.5rem;
     margin: 0;
     margin-bottom: 2.5rem;
-    font-size: 1.07rem;
-    line-height: 1.79rem;
+    font-size: 1.2rem;
+    line-height: 1.81rem;
     color: #959595;
+  }
+  .design__card-list li {
+    padding-left: 2px;
   }
   .design__card-pricetag {
     position: absolute;
@@ -964,6 +974,7 @@ img {
 }
 
 .modal__dialog {
+  display: block;
   position: relative;
   max-width: 36.36rem;
   background: #131313 url("../img/bg-lines.svg");

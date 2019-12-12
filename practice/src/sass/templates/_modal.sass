@@ -13,10 +13,14 @@
   display: flex
   align-items: center
   justify-content: center
+  &--unvisible
+    opacity: 0
+    visibility: hidden
   &--visible
     opacity: 1
-    visibility: visible   
+    visibility: visible    
   &__dialog
+    display: block
     position: relative
     max-width: 36.36rem
     background: $dark url('../img/bg-lines.svg')

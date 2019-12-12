@@ -33,6 +33,7 @@ function bs() {
   watch("./sass/**/*.sass", serveSass);
   watch("./sass/**/*.scss", serveSass);
   watch("app/*.html").on('change', browserSync.reload);
+  watch("./js/*.js").on('change', browserSync.reload);
 };
 
 
