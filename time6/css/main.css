@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "Arial-BoldMT";
+
+  src: url("../fonts/Arial-BoldMT.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/Arial-BoldMT.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+.section {
+  width: 570px;
+  height: 575px;
+  background: url(../img/bg.png);
+  background-size: 570px 800px;
+}
+.form {
+  position: absolute;
+  left: 125px;
+  top: 100px;
+  width: 320px;
+  height: 370px;
+  border: 1px solid #D5E2E2;
+  background-color: #fafcfc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+.account {
+  position: relative;
+  left: 29px;
+  top: -4px;
+  width: 149px;
+  height: 25px;
+  background-color: #01b3b3;
+}
+.account p {
+  position: relative;
+  top: 5px;
+  left: 10px;
+  color: #ffffff;
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 10.5px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+span {
+  color: #01b3b3;
+  font-size: 11px;
+}
+#email {
+  position: relative;
+  left: 29px;
+  margin-top: 27px;
+  font-family: "Arial-BoldMT";
+  font-size: 12px;
+  font-weight: 600;
+}
+.pass {
+  position: relative;
+  left: 29px;
+  font-family: "Arial-BoldMT";
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 14px;
+  margin-bottom: 12px;
+}
+.space {
+  margin-top: 15px;
+  margin-bottom: 11px;
+}
+.form-control {
+  position: relative;
+  left: 29px;
+  top: -1px;
+  height: 32px !important;
+  width: 262px !important;
+  margin-left: -1px;
+  background-image: url(../img/bg.png) !important;
+  border-radius: 2px !important;
+}
+input[type=text] {
+  font-style: italic;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 12px;
+}
+.btn {
+  position: relative;
+  left: 29px;
+  top: 35px;
+  width: 260px;
+  height: 46px;
+  font-style: uppercase;
+  font-size: 32px;
+  outline: none !important;
+  color: #ffffff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 2px #ffffff;
+  border: 0.5px solid #01b3b3 !important;
+  background-color: #01b3b3 !important;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.04) 0%, rgba(255, 255, 255, 0.2) 100%) !important;
+}
+.btn p {
+  padding-top: 5px;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
