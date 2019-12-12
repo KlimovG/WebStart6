@@ -5,10 +5,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const switchModal = () => {
     modal.classList.toggle('modal--visible');
   }
-
   modalBtn.forEach(element => {
     element.addEventListener('click', switchModal);
   });
 
-  closeBtn.addEventListener('click', switchModal)
+  modal.addEventListener('click', switchModal);
+
+  closeBtn.addEventListener('click', switchModal);
+  document.onkeydown = function(evt) {
+    
+    if (evt.keyCode == 27) {
+      modal.classList.remove('modal--visible');
+    }
+  };
+ 
 });
+
