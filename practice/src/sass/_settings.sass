@@ -9,13 +9,34 @@ img
   max-width: 100%
 .section
   padding: 60px 0
+  &--dark
+    background-color: $dark
+    color: $light
   &-title
     margin: auto
-    margin-bottom: 2.35rem
     text-align: center
+    &--left
+      text-align: left
     &__heading
       text-transform: uppercase
       font-family: 'Yeseva one', cursive
+      line-height: 138%
+      &--primary
+        color: $primary
+    &__word
+      display: flex
+      align-items: center
+
+      &::after
+        content: ''
+        width: 90px
+        height: 2px
+        margin-left: 2rem
+        background-color: $primary
+    &__text
+      font-size: 1.28rem
+      line-height: 2.07rem
+      max-width: 31.57rem
     &__description
       max-width: 52rem
       margin: auto

@@ -1,0 +1,107 @@
+.steps
+  position: relative
+  padding-top: 0
+  &__word
+    margin-bottom: 6rem
+    &::after
+      margin-left: 5rem
+  &__span
+    &--top
+      position: absolute
+      top: -1.28rem
+      font-size: 1.07rem
+      text-transform: uppercase
+  &__heading
+    margin-top: 0
+    margin-right: 3rem
+  &-slide
+    &__step
+      margin-top: 3.5rem
+    &__space
+      height: 4.35rem
+    &__first
+      p
+        &:last-child
+          margin-bottom: 5.35rem
+    &__navigation
+      margin-top: 3rem
+    &__text
+      max-width: 25rem
+      font-size: 1.07rem
+      line-height: 1.64rem
+      margin: 0
+      margin-bottom: 1rem
+    &__heading
+      max-width: 12rem
+      font-family: Yeseva One
+      font-size: 1.07rem
+      line-height: 1.64rem
+      text-transform: uppercase
+      color: $primary
+    &__about
+      display: flex
+      margin-top: 0.9rem !important
+      flex-direction: column
+      align-items: flex-start
+    &__description
+      max-width: 10rem
+      display: block
+      font-size: 1.07rem
+      line-height: 1.4rem
+    &__number
+      font-family: 'Yeseva One', cursive
+      font-size: 1.07rem
+      line-height: 1.5rem
+      text-transform: uppercase
+      display: flex
+      align-items: center
+      flex-direction: column
+      justify-content: center
+      &::after
+        content: ''
+        width: 100%
+        height: 1px
+        background-color: $primary
+    &__pagination1
+      font-family: 'Yeseva One', cursive
+      // &:nth-child(2)
+      &--primary
+        top: 0
+    &__button
+      display: inline-block
+      &-prev, &-next
+        bottom: 0 !important
+        top: auto !important
+        background-size: 42px
+        width: 42px !important
+        height: 14px !important
+      &::after
+        display: none
+      &-prev
+        left: 0
+        background: url('../img/arrow-left.svg') no-repeat center
+      &-next
+        background: url('../img/arrow-right.svg') no-repeat center
+    &__image
+      margin-top: 3.15rem 
+      display: flex
+      justify-content: space-around
+      align-items: center
+      img
+        margin: auto
+        width: auto
+
+  &-swiper
+    &__wrapper
+      display: flex
+      justify-content: space-between
+    &__pagination
+      position: relative !important
+  .col-70
+    .swiper-pagination-bullet
+      width: 40px
+      height: 40px
+      background-color: #000000 !important
+      content: open-quote
+  .swiper-pagination-bullet
+    margin-right: 0.8rem !important
