@@ -56,14 +56,16 @@ $(function() {
 $(function() {
  $(".button__scroll-up").scrollToTop();
 });
-// Swiper
+// Projects Swiper
 $(document).ready(function () {
   //initialize swiper when document ready
   var mySwiper = new Swiper ('.projects-swiper-container', {
     // Optional parameters
     loop: true,
+    centeredSlides: true,
+    slidesPerView: 1,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination2',
       type: 'bullets',
     },
     navigation: {
@@ -78,8 +80,8 @@ $(document).ready(function () {
   next.css('left', prev.width() + 20 + bullets.width()+10)
   bullets.css('left', prev.width() + 20)
 
-  //  Steps swiper container 1
-  var mySwiper2 = new Swiper ('.steps__swiper-container1', {
+  //  Steps swiper - text slider for steps section
+  var mySwiper2 = new Swiper ('.steps__swiper-container2', {
     // Optional parameters
     loop: false,
     navigation: {
@@ -88,71 +90,82 @@ $(document).ready(function () {
     },
     // If we need pagination
     pagination: {
-      el: '.steps-slide__pagination1',
+      el: '.steps-slide__pagination2',
+      type: 'bullets',
+    },
+  });
+
+  //  Steps swiper - image slider for steps section
+  var mySwiper3 = new Swiper ('.steps__swiper-container3', {
+    // If we need pagination
+    pagination: {
+      el: '.steps-slide__pagination3',
       type: 'fraction',
     },
-    // pagination: {
-    //   el: '.steps-slide__pagination2',
-    // },
-  });
-  // var prevSteps = $('.steps-slide__button-prev');
-  // var nextSteps = $('.steps-slide__button-next');
-  // var bulletsSteps = $('.steps-slide__pagination2');
-
-  // nextSteps.css('left', prevSteps.width() + 20 + bulletsSteps.width()+10)
-  // bulletsSteps.css('left', prevSteps.width() + 20)
-
-  //  Steps swiper container 2
-  var mySwiper3 = new Swiper ('.steps__swiper-container2', {
-    // Optional parameters
-    // direction: 'vertical',
-    // loop: false,
-    slidesPerView: 3,
-    slidesPerColumn: 2,
-    spaceBetween: 30,
-    slidesPerColumnFill: 'row',
-    slideToClickedSlide: true,
-    // If we need pagination
-    pagination: {
-      el: '.steps-slide__pagination2',
-      type: 'bullets',
-    },
     navigation: {
       nextEl: '.steps-slide__button-next',
       prevEl: '.steps-slide__button-prev',
     },
   });
-  //  Steps swiper container 2
-  var mySwiper4 = new Swiper ('.steps__swiper-container3', {
-    // Optional parameters
-    // direction: 'vertical',
-    // loop: false,
-    
-    // If we need pagination
-    pagination: {
-      el: '.steps-slide__pagination2',
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.steps-slide__button-next',
-      prevEl: '.steps-slide__button-prev',
-    },
-  });
-
-
-
-
-
-
-
   // Width between pagination bullets 
   var stepsNext = $('.steps-slide__button-next');
   var stepsPrev = $('.steps-slide__button-prev');
   var stepsBullets = $('.steps-slide__pagination2');
 
   stepsNext.css('left', stepsPrev.width() + 30 + stepsBullets.width() + 20)
-  stepsBullets.css('left', stepsPrev.width() + 30) 
+  stepsBullets.css('left', stepsPrev.width() + 17) 
+    // Points navigation in section steps
+  $('.steps__item').on('click', function () {
+    $('.steps__item').removeClass('active');
+    $(this).addClass('active');
+    const e = $(this).data('index');
+    mySwiper2.slideTo(e)
+    mySwiper3.slideTo(e)
+    })
 
+  mySwiper2.on('slideChange', (function () {
+  let e = mySwiper2.activeIndex - 0;
+  if (e === 6) {e=0};
+  $('.steps__item').removeClass('active');
+  $('.steps__item').eq(e).addClass('active');
+  }));
 
+  mySwiper3.on('slideChange', (function () {
+    let e = mySwiper3.activeIndex - 0;
+    if (e === 6) {e=0};
+    $('.steps__item').removeClass('active');
+    $('.steps__item').eq(e).addClass('active');
+    }))
 });
 
+// toggle animation by visibility
+// var block_show = false;
+ 
+// function scrollTracking(){
+// 	if (block_show) {
+// 		return false;
+// 	}
+ 
+// 	var wt = $(window).scrollTop();
+// 	var wh = $(window).height();
+// 	var et = $('.active').offset().top;
+// 	var eh = $('.active').outerHeight();
+// 	var dh = $(document).height();   
+ 
+// 	if (wt + wh >= et || wh + wt == dh || eh + et < wh){
+// 		block_show = true;
+		
+// 		// Код анимации
+// 		$('.active div:eq(0)').show('fast', function(){
+// 			$(this).next().show('fast', arguments.callee);
+// 		});
+// 	}
+// }
+ 
+// $(window).scroll(function(){
+// 	scrollTracking();
+// });
+	
+// $(document).ready(function(){ 
+// 	scrollTracking();
+// });

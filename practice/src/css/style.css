@@ -398,6 +398,7 @@ img {
     color: #ffffff; }
   .button__scroll-up {
     position: fixed;
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -470,6 +471,9 @@ img {
 .col-30 {
   width: 30%; }
 
+.col-39 {
+  width: 39%; }
+
 .col-40 {
   width: 40%; }
 
@@ -481,6 +485,9 @@ img {
 
 .col-60 {
   width: 60%; }
+
+.col-63 {
+  width: 63%; }
 
 .col-70 {
   width: 70%; }
@@ -625,6 +632,12 @@ img {
   .title--primary {
     color: #e3b873; }
 
+.projects__title--mobile {
+  display: none; }
+
+.projects__title--desktop {
+  display: block; }
+
 .swiper-slide {
   display: flex;
   flex-wrap: wrap; }
@@ -767,6 +780,330 @@ img {
 .design__section-title {
   margin-bottom: 2.78rem; }
 
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal--unvisible {
+    opacity: 0;
+    visibility: hidden; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
+  .modal__dialog {
+    display: block;
+    position: relative;
+    max-width: 36.36rem;
+    background: #131313 url("../img/bg-lines.svg");
+    padding: 2.36rem 3.5rem 1.928rem;
+    color: #ffffff; }
+  .modal__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url(../img/close.svg) no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modal__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.357rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2.428rem; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__input {
+    margin-bottom: 3.482rem; }
+    .modal__input:last-of-type {
+      margin-bottom: 1rem; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__button {
+    align-self: flex-end; }
+
+.steps {
+  padding-top: 0; }
+  .steps__container--relative {
+    position: relative; }
+  .steps__word {
+    margin-bottom: 6rem; }
+    .steps__word::after {
+      width: 6.6rem;
+      margin-left: 6.2rem; }
+  .steps__span--top {
+    position: absolute;
+    top: -2.7rem;
+    left: 0;
+    margin-bottom: 0rem;
+    font-size: 1.07rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px; }
+  .steps__title {
+    margin-top: 0; }
+  .steps__heading {
+    margin-top: 0;
+    font-size: 1.9rem; }
+  .steps__counter {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.3rem;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+    color: #ffffff; }
+  .steps__step {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 1.9rem; }
+  .steps__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .steps__row:last-child {
+      margin-bottom: 1rem; }
+  .steps__item {
+    display: block;
+    width: 18%;
+    opacity: 0.5;
+    margin-top: 1.6rem; }
+    .steps__item:hover {
+      cursor: pointer; }
+    .steps__item-3, .steps__item-6 {
+      max-width: 7rem; }
+  .steps .active {
+    opacity: 1; }
+  .steps__point {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.07rem;
+    line-height: 1.5rem;
+    width: 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; }
+    .steps__point::after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: #e3b873; }
+  .steps__description {
+    max-width: 10rem;
+    display: block;
+    margin-top: 0.6rem;
+    font-size: 1.07rem;
+    line-height: 1.4rem; }
+  .steps-slide__step {
+    margin-top: 3.5rem; }
+  .steps-slide__space {
+    height: 4.35rem; }
+  .steps-slide__first {
+    flex-direction: column; }
+    .steps-slide__first p:last-child {
+      margin-bottom: 6.6rem; }
+  .steps-slide__navigation {
+    margin-top: 3rem; }
+  .steps-slide__text {
+    max-width: 24rem;
+    font-size: 1.07rem;
+    line-height: 1.8rem;
+    margin: 0;
+    margin-bottom: 1rem; }
+  .steps-slide__heading {
+    max-width: 12rem;
+    margin-bottom: 0.7rem;
+    font-family: Yeseva One;
+    font-size: 1.07rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+    color: #e3b873; }
+  .steps-slide__about {
+    display: flex;
+    margin-top: 0.9rem !important;
+    flex-direction: column;
+    align-items: flex-start; }
+  .steps-slide__pagination1 {
+    font-family: 'Yeseva One', cursive; }
+    .steps-slide__pagination1--primary {
+      top: 0; }
+  .steps-slide__button {
+    display: inline-block; }
+    .steps-slide__button-prev, .steps-slide__button-next {
+      bottom: 0 !important;
+      top: auto !important;
+      background-size: 48px;
+      width: 48px !important;
+      height: 14px !important; }
+    .steps-slide__button::after {
+      display: none; }
+    .steps-slide__button-prev {
+      left: 0 !important;
+      background: url("../img/arrow-left.svg") no-repeat center; }
+    .steps-slide__button-next {
+      background: url("../img/arrow-right.svg") no-repeat center; }
+  .steps-slide__image {
+    margin-top: 3.15rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .steps-slide__image img {
+      margin: auto;
+      width: auto; }
+  .steps-swiper__wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .steps-swiper__pagination {
+    position: relative !important; }
+  .steps .col-70 .swiper-pagination-bullet {
+    width: 40px;
+    height: 40px;
+    background-color: #000000 !important;
+    content: open-quote; }
+  .steps .swiper-pagination-bullet {
+    margin-right: 1.1rem !important; }
+    .steps .swiper-pagination-bullet:last-child {
+      margin-right: 0 !important; }
+    .steps .swiper-pagination-bullet-active {
+      width: 9px;
+      height: 9px; }
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px; }
+  .nav__item {
+    margin-right: 1rem; } }
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 10px; }
+  .nav {
+    display: none; }
+  .hero__instagram {
+    display: none; }
+  .hero__content {
+    margin-left: 0; } }
+
+@media screen and (max-width: 570px) {
+  html {
+    font-size: 14px; }
+  .row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+  .container {
+    width: 95%; }
+  .col-30 {
+    width: 95%; }
+  .col-50 {
+    width: 95%; }
+  .button__scroll-up {
+    display: none !important; }
+  .types__card {
+    margin-bottom: 5rem; }
+  .card__image {
+    display: block;
+    width: 100%;
+    margin: auto; }
+  .card__text {
+    position: relative;
+    max-width: 22rem;
+    margin: 0;
+    margin-top: -9.1rem;
+    padding: 1.79rem 2.14rem;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+  .card-title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.29rem;
+    margin-top: 0;
+    margin-bottom: 0.7rem; }
+  .card-list {
+    padding: 0 0 0 1rem;
+    margin: 0;
+    margin-bottom: 2.5rem;
+    font-size: 1.07rem;
+    line-height: 1.79rem;
+    color: #959595; }
+  .card-pricetag {
+    position: absolute;
+    left: 0;
+    bottom: -1.79rem;
+    font-size: 1.29rem;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    background-color: #e3b873;
+    color: #ffffff;
+    padding: 1.214rem 2.6rem; }
+  .section-title {
+    text-align: center; }
+    .section-title__text {
+      margin: auto;
+      width: 95%;
+      max-width: 95%; }
+  .swiper-pagination2 {
+    left: 43% !important;
+    margin: auto; }
+  .swiper-button-next2 {
+    left: 40% !important;
+    margin: auto; }
+  .swiper-button-prev2 {
+    left: 25% !important;
+    margin: auto; }
+  .steps {
+    display: none; }
+  .contacts__phone {
+    margin-right: 0;
+    color: #ffffff;
+    text-decoration: none; }
+  .contacts__button {
+    display: none; }
+  .title {
+    font-size: 1.64rem; }
+  .hero__scroll-down {
+    display: none; }
+  .hero__content {
+    margin: auto; }
+  .hero__text {
+    font-size: 1.29rem;
+    margin-bottom: 2.28rem; }
+  .hero__button {
+    display: block;
+    min-width: 22.86rem;
+    width: 100%;
+    margin-bottom: 1.85rem; }
+  .projects__title--mobile {
+    display: block; }
+  .projects__title--desktop {
+    display: none; }
+  .projects__title-heading {
+    text-align: center; }
+  .projects__text {
+    width: 95%;
+    margin-bottom: 2.57em; }
+  .projects__row {
+    flex-direction: column-reverse; }
+  .design {
+    background-color: #131313; }
+    .design__section-title {
+      color: #ffffff; }
+    .design__card {
+      margin-bottom: 5.7rem; } }
+
 @media screen and (min-width: 570px) {
   .display-yes {
     display: none; }
@@ -836,213 +1173,6 @@ img {
       background-color: #e3b873;
       color: #ffffff;
       padding: 1.214rem 5.6rem 1.214rem 2.3rem; } }
-
-.modal {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  z-index: 999999;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(19, 19, 19, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .modal--unvisible {
-    opacity: 0;
-    visibility: hidden; }
-  .modal--visible {
-    opacity: 1;
-    visibility: visible; }
-  .modal__dialog {
-    display: block;
-    position: relative;
-    max-width: 36.36rem;
-    background: #131313 url("../img/bg-lines.svg");
-    padding: 2.36rem 3.5rem 1.928rem;
-    color: #ffffff; }
-  .modal__close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 28px;
-    height: 28px;
-    background: transparent url(../img/close.svg) no-repeat center;
-    border: none;
-    margin: 12px;
-    cursor: pointer; }
-  .modal__title {
-    font-family: 'Yeseva One', cursive;
-    font-size: 1.357rem;
-    text-align: center;
-    margin: 0;
-    margin-bottom: 2.428rem; }
-  .modal__form {
-    display: flex;
-    flex-direction: column; }
-  .modal__input {
-    margin-bottom: 3.482rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 1rem; }
-  .modal__policy {
-    margin-bottom: 2.7rem; }
-  .modal__button {
-    align-self: flex-end; }
-
-.steps {
-  position: relative;
-  padding-top: 0; }
-  .steps__word {
-    margin-bottom: 6rem; }
-    .steps__word::after {
-      margin-left: 5rem; }
-  .steps__span--top {
-    position: absolute;
-    top: -1.28rem;
-    font-size: 1.07rem;
-    text-transform: uppercase; }
-  .steps__heading {
-    margin-top: 0;
-    margin-right: 3rem; }
-  .steps-slide__step {
-    margin-top: 3.5rem; }
-  .steps-slide__space {
-    height: 4.35rem; }
-  .steps-slide__first p:last-child {
-    margin-bottom: 5.35rem; }
-  .steps-slide__navigation {
-    margin-top: 3rem; }
-  .steps-slide__text {
-    max-width: 25rem;
-    font-size: 1.07rem;
-    line-height: 1.64rem;
-    margin: 0;
-    margin-bottom: 1rem; }
-  .steps-slide__heading {
-    max-width: 12rem;
-    font-family: Yeseva One;
-    font-size: 1.07rem;
-    line-height: 1.64rem;
-    text-transform: uppercase;
-    color: #e3b873; }
-  .steps-slide__about {
-    display: flex;
-    margin-top: 0.9rem !important;
-    flex-direction: column;
-    align-items: flex-start; }
-  .steps-slide__description {
-    max-width: 10rem;
-    display: block;
-    font-size: 1.07rem;
-    line-height: 1.4rem; }
-  .steps-slide__number {
-    font-family: 'Yeseva One', cursive;
-    font-size: 1.07rem;
-    line-height: 1.5rem;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center; }
-    .steps-slide__number::after {
-      content: '';
-      width: 100%;
-      height: 1px;
-      background-color: #e3b873; }
-  .steps-slide__pagination1 {
-    font-family: 'Yeseva One', cursive; }
-    .steps-slide__pagination1--primary {
-      top: 0; }
-  .steps-slide__button {
-    display: inline-block; }
-    .steps-slide__button-prev, .steps-slide__button-next {
-      bottom: 0 !important;
-      top: auto !important;
-      background-size: 42px;
-      width: 42px !important;
-      height: 14px !important; }
-    .steps-slide__button::after {
-      display: none; }
-    .steps-slide__button-prev {
-      left: 0;
-      background: url("../img/arrow-left.svg") no-repeat center; }
-    .steps-slide__button-next {
-      background: url("../img/arrow-right.svg") no-repeat center; }
-  .steps-slide__image {
-    margin-top: 3.15rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
-    .steps-slide__image img {
-      margin: auto;
-      width: auto; }
-  .steps-swiper__wrapper {
-    display: flex;
-    justify-content: space-between; }
-  .steps-swiper__pagination {
-    position: relative !important; }
-  .steps .col-70 .swiper-pagination-bullet {
-    width: 40px;
-    height: 40px;
-    background-color: #000000 !important;
-    content: open-quote; }
-  .steps .swiper-pagination-bullet {
-    margin-right: 0.8rem !important; }
-
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 12px; }
-  .nav__item {
-    margin-right: 1rem; } }
-
-@media screen and (max-width: 992px) {
-  .nav {
-    display: none; }
-  .hero__instagram {
-    display: none; }
-  .hero__content {
-    margin-left: 0; } }
-
-@media screen and (max-width: 570px) {
-  .row {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; }
-  .types__card {
-    margin-bottom: 5rem; }
-  .card__text {
-    margin-left: 0; }
-  .section-title {
-    max-width: 21.86rem; }
-  .contacts__phone {
-    margin-right: 0;
-    color: #ffffff;
-    text-decoration: none; }
-  .contacts__button {
-    display: none; }
-  .title {
-    font-size: 1.64rem; }
-  .hero__scroll-down {
-    display: none; }
-  .hero__content {
-    max-width: 22.86rem; }
-  .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
-  .hero__button {
-    display: block;
-    min-width: 22.86rem;
-    margin-bottom: 1.85rem; }
-  .design {
-    background-color: #131313; }
-    .design__section-title {
-      color: #ffffff; }
-    .design__card {
-      margin-bottom: 5.7rem; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
