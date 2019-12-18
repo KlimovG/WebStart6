@@ -278,3 +278,48 @@ $(document).ready(function() {
 		});
 	});
 });
+
+
+// Form validations
+$('.modal__form').validate ({
+  errorClass: "invalid" ,
+  rules: {
+    // simple rule, converted to {required:true}
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 15,
+    },
+    userPhone: "required",
+    // compound rule
+    userEmail: {
+      required: true,
+      email: true
+    }
+  },
+  messages: {
+    userName: {
+      required:"Имя обязательно",
+      minlength: "Имя не короче 2 букв",
+      maxlength: "Имя не длинее 15 букв",
+    },           
+    userPhone: "Телефон обязателен",
+    userEmail: {
+      required: "Заполните поле",
+      email: "Введите в формате: name@domain.com"
+    }
+  },
+  errorElement: "div",
+
+  showErrors: function(errorMap, errorList) {
+    $("#summary").html("Your form contains "
+      + this.numberOfInvalids()
+      + " errors, see details below.");
+    this.defaultShowErrors();
+  },
+});
+
+// Mask plugin
+$(document).ready(function(){
+  $('[type="tel"]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+});
