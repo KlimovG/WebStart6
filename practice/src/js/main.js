@@ -138,34 +138,143 @@ $(document).ready(function () {
     }))
 });
 
-// toggle animation by visibility
-// var block_show = false;
+
+// animation for play icon
+$(document).ready(function() {
+	var windowHeight = $(window).height();
  
-// function scrollTracking(){
-// 	if (block_show) {
-// 		return false;
-// 	}
+	$(document).on('scroll', function() {
+		$('.video__play').each(function() {
+			var self = $('.video__play'),
+			    height = self.offset().top;
+			if ($(document).scrollTop() + windowHeight >= height) {
+				self.addClass('screwIn')
+			}
+		});
+	});
+});
+// animation for col 50 right in projects
+$(document).ready(function() {
+	var windowHeight = $(window).height();
  
-// 	var wt = $(window).scrollTop();
-// 	var wh = $(window).height();
-// 	var et = $('.active').offset().top;
-// 	var eh = $('.active').outerHeight();
-// 	var dh = $(document).height();   
+	$(document).on('scroll', function() {
+		$('#projCol50right').each(function() {
+			var self = $(this),
+			height = self.offset().top;
+			if ($(document).scrollTop() + windowHeight >= height) {
+				self.addClass('slideRight')
+			}
+		});
+	});
+});
+// animation for col 50 left in projects
+
+$(document).ready(function() {
+	var windowHeight = $(window).height();
  
-// 	if (wt + wh >= et || wh + wt == dh || eh + et < wh){
-// 		block_show = true;
-		
-// 		// Код анимации
-// 		$('.active div:eq(0)').show('fast', function(){
-// 			$(this).next().show('fast', arguments.callee);
-// 		});
-// 	}
-// }
+	$(document).on('scroll', function() {
+		$('#projCol50Left').each(function() {
+			var self = $(this),
+			height = self.offset().top;
+			if ($(document).scrollTop() + windowHeight >= height) {
+				self.addClass('slideLeft')
+			}
+		});
+	});
+});
+
+// animation for col 30 left in types
+
+$(document).ready(function() {
+	var windowHeight = $(window).height();
  
-// $(window).scroll(function(){
-// 	scrollTracking();
-// });
-	
-// $(document).ready(function(){ 
-// 	scrollTracking();
-// });
+	$(document).on('scroll', function() {
+		$('#types30Left').each(function() {
+			var self = $(this),
+			height = self.offset().top;
+			if ($(document).scrollTop() + windowHeight >= height) {
+				self.addClass('slideLeft')
+			}
+		});
+	});
+});
+
+// animation for col 30 center in types
+
+$(document).ready(function() {
+	var windowHeight = $(window).height();
+ 
+	$(document).on('scroll', function() {
+		$('#types30Center').each(function() {
+			var self = $(this),
+			height = self.offset().top;
+			if ($(document).scrollTop() + windowHeight >= height) {
+				self.addClass('slideCenter')
+			}
+		});
+	});
+});
+
+// animation for col 30 right in types
+
+$(document).ready(function() {
+	var windowHeight = $(window).height();
+ 
+	$(document).on('scroll', function() {
+		$('#types30Right').each(function() {
+			var self = $(this),
+			height = self.offset().top;
+			if ($(document).scrollTop() + windowHeight >= height) {
+				self.addClass('slideRight')
+			}
+		});
+	});
+});
+
+// animation for col 30 left in types
+
+$(document).ready(function() {
+	var windowHeight = $(window).height();
+ 
+	$(document).on('scroll', function() {
+		$('#des30Left').each(function() {
+			var self = $(this),
+			height = self.offset().top;
+			if ($(document).scrollTop() + windowHeight >= height) {
+				self.addClass('slideLeft')
+			}
+		});
+	});
+});
+
+// animation for col 30 center in types
+
+$(document).ready(function() {
+	var windowHeight = $(window).height();
+ 
+	$(document).on('scroll', function() {
+		$('#des30Center').each(function() {
+			var self = $(this),
+			height = self.offset().top;
+			if ($(document).scrollTop() + windowHeight >= height) {
+				self.addClass('slideCenter')
+			}
+		});
+	});
+});
+
+// animation for col 30 right in types
+
+$(document).ready(function() {
+	var windowHeight = $(window).height();
+ 
+	$(document).on('scroll', function() {
+		$('#des30Right').each(function() {
+			var self = $(this),
+			height = self.offset().top;
+			if ($(document).scrollTop() + windowHeight >= height) {
+				self.addClass('slideRight')
+			}
+		});
+	});
+});
