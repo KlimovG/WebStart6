@@ -1121,6 +1121,65 @@ input.invalid {
       width: 9px;
       height: 9px; }
 
+.clients {
+  padding-bottom: 30rem; }
+  .clients__heading {
+    font-size: 1.428rem; }
+  .clients__description {
+    margin-top: 1.1rem;
+    margin-bottom: 3.1rem;
+    font-size: 1.428rem; }
+  .clients-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    min-height: 30.57rem;
+    padding: 1.714rem 1.428rem;
+    box-shadow: 0px 10px 50px rgba(19, 19, 19, 0.04); }
+    .clients-card__client {
+      width: 100%;
+      display: flex; }
+    .clients-card__name {
+      margin-left: 1.64rem;
+      max-width: 14.28rem;
+      font-family: 'Yeseva One';
+      font-weight: normal;
+      font-size: 1.28rem;
+      line-height: 1.64rem; }
+    .clients-card__text {
+      margin-top: 1.1rem;
+      color: #959595;
+      font-size: 1.07rem;
+      line-height: 2rem; }
+    .clients-card__scale {
+      width: 32px;
+      height: auto; }
+    .clients-card__item {
+      display: flex;
+      justify-content: space-between;
+      background-color: #e3b873;
+      color: #ffffff;
+      padding: 0.785rem 1.5rem 0.785rem 1rem; }
+      .clients-card__item--first {
+        width: 9.64rem; }
+      .clients-card__item--second {
+        width: 11.28rem; }
+      .clients-card__item-group {
+        position: absolute;
+        bottom: -2.1rem;
+        left: 0;
+        display: flex;
+        justify-content: flex-start; }
+      .clients-card__item-txt {
+        display: flex;
+        align-items: center;
+        font-family: 'Yeseva One', cursive;
+        font-size: 1.214rem;
+        letter-spacing: 1px; }
+
 .footer {
   padding-top: 3rem;
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover; }
@@ -1129,7 +1188,8 @@ input.invalid {
     max-width: 63.07rem;
     margin: auto;
     margin-bottom: 3.714rem;
-    padding: 2.5rem;
+    margin-top: -18.8rem;
+    padding: 1rem  2.5rem 2.7rem;
     color: #ffffff; }
   .footer__title {
     text-transform: uppercase;
