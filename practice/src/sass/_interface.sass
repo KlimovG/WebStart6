@@ -56,6 +56,8 @@
   font-size: 1.285rem
   color: $light
   padding: 0.5rem 0
+  &-group
+    position: relative
   &--light
     &::placeholder
       color: $light
@@ -89,3 +91,7 @@ label
 input
   &.invalid
     border-bottom: tomato solid 1px
+div
+  &.invalid
+    position: absolute
+    margin-top: 4rem

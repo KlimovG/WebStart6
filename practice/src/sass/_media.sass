@@ -4,17 +4,80 @@
   .nav
     &__item
       margin-right: 1rem
+@media screen and ( max-width: 1150px )
+  .clients
+    &-card
+      min-height: 37rem
+  
 @media screen and ( max-width: 992px )
   html
-    font-size: 10px
+    font-size: 12px
   .nav
     display: none
+  .button
+    &
+  .design
+    margin-bottom: 0rem
 
+  .steps
+    display: none
+  .team
+    background-color: $dark
+    margin-top: 0
+    &__text
+      color: $light
+  .types
+    &-card
+      &__pricetag
+        min-width: 11rem 
   .hero
     &__instagram
       display: none
     &__content
       margin-left: 0
+  .clients
+    &-card
+      min-height: 40rem
+      &__item
+        padding-right: 1rem
+        &-txt
+          max-width: 3.5rem
+          font-size: 1rem
+        &-group
+      &__scale
+        width: 25px
+        margin-right: 0.5rem
+      &__note
+        width: 25px
+        margin-right: 0.5rem
+      &__item
+        &--first
+          min-width: 8rem
+          max-width: 9rem
+        &--second
+          min-width: 8rem
+          max-width: 9rem
+@media screen and ( max-width: 850px )
+  .team
+    &-card
+      &__name
+        font-size: 1rem
+      &__role
+        font-size: 0.95rem
+      &__exp
+        font-size: 0.8rem
+      &__group
+        bottom: -13rem
+      &__role
+        padding-bottom: 0.5rem
+    &__text
+      padding-top: 17rem
+        
+  .clients
+    display: none
+  .footer
+    &__wrap
+      margin-top: 0
 @media screen and ( max-width: 570px )
   html
     font-size: 14px
@@ -132,14 +195,114 @@
       flex-direction: column-reverse
 
   .control
-    
-
-  .design
+  
+  .team
     background-color: $dark
-    &__section-title
-      color: $light 
-    &__card
-      margin-bottom: 5.7rem
+    padding-top: 10rem
+    padding-bottom: 1.1rem
+    margin-top: -9rem
+    font-size: 2rem
+    letter-spacing: 1.6px
+    &__text
+      display: none
+    &__description
+      font-size: 1.03rem
+      letter-spacing: 0.3px
+      width: 93%
+    &__row
+      justify-content: space-between
+    &-card
+      position: relative
+      margin: 0.4rem auto
+      height: 30rem
+      margin-bottom: 25rem
+      width: 86%
+      margin-left: 2.8rem
+      &__role
+        padding-top: 0
+        letter-spacing: 0.1px
+        font-size: 1.35rem
+      &__name
+        padding-top: 1.2rem
+        font-size: 1.2rem
+        letter-spacing: 1.25px
+      &__group
+        bottom: -18rem
+        left: 12%
+        width: 76%
+      &__image
+        width: 100%
+      &--first
+        &::before
+          width: 70px
+      &--second
+        &::before
+          width: 70px
+      &--third
+        &::before
+          width: 70px
+  .clients
+    display: none
+  .footer
+    padding-top: 0
+    padding-bottom: 2rem
+    background-color: $dark
+    background-image: none
+    &__title
+      margin-bottom: 3.65rem
+    &__input
+      width: 100%
+      border-bottom: 1px solid $light
+      &-group
+        flex-basis: 100%
+        width: 100%
+        margin-bottom: 4.3rem
+        &--third
+          margin-bottom: 0.3rem
+    &__description
+      font-size: 1.3rem
+      max-width: 89%
+      line-height: 1.9rem
+    &__adress
+      & br
+        display: none
+    &__icon
+      margin: 0 11px
+      width: 39px
+      height: 39px
+    &__image
+      width: 18px
+    &__map
+      margin: 0
+    &__wrap
+      margin-top: 0
+      padding: 1rem 0.5rem 
+      background-color: $dark
+      &--second
+        display: flex
+        flex-direction: column-reverse
+        justify-content: space-between
+    &__policy
+      justify-content: flex-start
+    &__button
+      margin-top: 1rem
+      width: 100%
+      font-size: 1.2rem
+    &__menu
+      display: none
+  .policy
+    &__label
+      justify-content: flex-start
+  .map
+    height: 255px
+    &__wrap
+      height: 255px
+      margin-bottom: 1.5rem
+  .button
+    &__scroll-up
+      display: none
+
+      
  
 // Media for design section MOBILE FIRST !!!
 @media screen and ( min-width: 570px )
@@ -153,9 +316,14 @@
     justify-content: space-between
   .design__col
     flex-basis: 32%
+    z-index: 1
   .design
     position: relative
-    // background-color: #fff
+    background-color: #fff
+    // background-image: url('../img/design-bg.svg')
+    background-position: center center
+    // background: $light url('../img/Rectangle 11.2.png')
+    background-size: 50% 50%
     padding-bottom: 0
     color: $dark
     &::before
@@ -206,7 +374,7 @@
         position: absolute
         left: 0
         bottom: -1.4rem
-        min-width: 228px
+        min-width: 16.285rem
         font-size: 1.29rem
         font-family: 'Yeseva One', cursive
         text-transform: uppercase

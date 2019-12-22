@@ -1,10 +1,12 @@
 .team
+  position: relative
   margin-top: -35rem
   padding-bottom: 
   &__heading
     margin-top: 1.5rem
     font-size: 1.4rem
   &__description
+    font-family: 'Futura Book'
     margin-top: 1.2rem
     margin-bottom: 5.6rem
     font-size: 1.43rem
@@ -14,7 +16,7 @@
     max-width: 40.785rem
     margin-top: 9rem
     margin: auto
-    padding-top: 3.5rem
+    padding-top: 13.4rem
     text-align: center
     font-size: 1.428rem
     line-height: 2.4rem
@@ -39,7 +41,7 @@
         transform: translate(-50%, -50%)
         width: 5rem
         height: 5rem
-        z-index: 999
+        z-index: 5
         content: ''
         background: $primary url("../img/idea.svg") no-repeat center
         box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
@@ -71,9 +73,11 @@
     &__image
       margin-bottom: -6rem
     &__group
+      position: absolute
+      bottom: -10rem
+      left: 7%
       display: flex
       justify-content: space-between
-      margin: auto
       flex-direction: column
       text-align: center
       width: 85%

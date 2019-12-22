@@ -1,12 +1,19 @@
 .design
+  margin-bottom: -35rem
   display: flex
   justify-content: space-between
   align-items: center
+  background-color: $dark
   &__section-title
     color: $light 
     margin-bottom: 2.8rem
   &__card
-    margin-bottom: 2.35rem  // раньше было 5.7rem. не совпадало макету  
+    margin-bottom: 2.35rem
+  &__col
+    margin-bottom: 3.4rem  // раньше было 5.7rem. не совпадало макету 
+  &__description
+    max-width: 85%
+
 .design__card
   &-image
     display: block
@@ -14,33 +21,34 @@
     margin: auto
   &-text
     position: relative
-    max-width: 23.6rem
-    margin-top: -9.3rem
+    max-width: 80%
+    margin-top: -10rem
     padding: 1.79rem 2.14rem
+    padding-bottom: 0.5rem
     background-color: #fff
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
   &-title
       font-family: 'Yeseva One', cursive
-      font-size: 1.29rem
+      font-size: 1.1rem
       margin-top: 0
       margin-bottom: 0.7rem
   &-list
     padding: 0 0 0 1rem
     margin: 0
     margin-bottom: 2.5rem
-    font-size: 1.07rem
-    line-height: 1.79rem
+    font-size: 0.9rem
+    line-height: 1.59rem
     color: $secondary
   &-pricetag
     position: absolute
     left: 0
-    bottom: -1.79rem
-    font-size: 1.29rem
+    bottom: -1.39rem
+    font-size: 1.09rem
     font-family: 'Yeseva One', cursive
     text-transform: uppercase
     background-color: $primary
     color: $light
-    padding: 1.214rem 2.6rem
+    padding: 0.8rem 3.4rem
 .display-none
   display: none
 .display-yes
@@ -48,3 +56,4 @@
 .design
   &__section-title
     margin-bottom: 2.78rem
+

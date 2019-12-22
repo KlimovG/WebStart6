@@ -290,6 +290,11 @@ $('.modal__form').validate ({
       minlength: 2,
       maxlength: 15,
     },
+    userText: {
+      required: true,
+      minlength: 20,
+      maxlength: 300,
+    },
     userPhone: "required",
     // compound rule
     userEmail: {
@@ -304,6 +309,11 @@ $('.modal__form').validate ({
       maxlength: "Имя не длинее 15 букв",
     },           
     userPhone: "Телефон обязателен",
+    userText: {
+      required:"Напишите ваш вопрос",
+      minlength: "Текст не короче 20 букв",
+      maxlength: "Текст не длинее 300 букв",
+    },
     userEmail: {
       required: "Заполните поле",
       email: "Введите в формате: name@domain.com"
@@ -311,15 +321,105 @@ $('.modal__form').validate ({
   },
   errorElement: "div",
 
-  showErrors: function(errorMap, errorList) {
-    $("#summary").html("Your form contains "
-      + this.numberOfInvalids()
-      + " errors, see details below.");
-    this.defaultShowErrors();
-  },
+  
 });
-
+// Form validations
+$('.control__form').validate ({
+  errorClass: "invalid" ,
+  rules: {
+    // simple rule, converted to {required:true}
+    userNameControl: {
+      required: true,
+      minlength: 2,
+      maxlength: 15,
+    },
+    userPhoneControl: "required",
+  },
+  messages: {
+    userNameControl: {
+      required:"Имя обязательно",
+      minlength: "Имя не короче 2 букв",
+      maxlength: "Имя не длинее 15 букв",
+    },           
+    userPhoneControl: "Телефон обязателен",
+  },
+  errorElement: "div",
+});
+// Form validations
+$('.footer__form').validate ({
+  errorClass: "invalid" ,
+  rules: {
+    // simple rule, converted to {required:true}
+    userNameFooter: {
+      required: true,
+      minlength: 2,
+      maxlength: 15,
+    },
+    userTextFooter: {
+      required: true,
+      minlength: 20,
+      maxlength: 300,
+    },
+    userPhoneFooter: "required",
+    // compound rule
+  },
+  messages: {
+    userNameFooter: {
+      required:"Имя обязательно",
+      minlength: "Имя не короче 2 букв",
+      maxlength: "Имя не длинее 15 букв",
+    },           
+    userPhoneFooter: "Телефон обязателен",
+    userTextFooter: {
+      required:"Напишите ваш вопрос",
+      minlength: "Текст не короче 20 букв",
+      maxlength: "Текст не длинее 300 букв",
+    },
+  },
+  errorElement: "div",
+});
 // Mask plugin
 $(document).ready(function(){
   $('[type="tel"]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 });
+
+// Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+      // Создание карты.
+      var myMap = new ymaps.Map("map", {
+          // Координаты центра карты.
+          // Порядок по умолчанию: «широта, долгота».
+          // Чтобы не определять координаты центра карты вручную,
+          // воспользуйтесь инструментом Определение координат.
+          center: [47.244734, 39.723227],
+          // Уровень масштабирования. Допустимые значения:
+          // от 0 (весь мир) до 19.
+          zoom: 17,
+      });
+      var myPlacemark = new ymaps.Placemark([47.244734, 39.723227], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: '../img/map.svg',
+        iconImageSize: [30, 30],
+        iconImageOffset: [-15, -15]
+      });
+      var myGeoObject = new ymaps.GeoObject({
+        geometry: {
+            type: "Point", // тип геометрии - точка
+            coordinates: [47.244734, 39.723227] // координаты точки
+        }
+      });
+      // Размещение геообъекта на карте.
+      myMap.geoObjects.add(myPlacemark)
+    };
+    // Height change of clients card height
+    // changeHeightCard = () => {
+    //   const cardHeight = document.querySelector('.clients-card__item--first').clientHeight;
+
+    //   if (cardHeight && !target.classList.contains('modal__dialog')) {
+    //     hideModal();
+    //   }
+    // };
+    // changeHeightCard();
+    
