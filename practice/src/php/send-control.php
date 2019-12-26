@@ -8,8 +8,9 @@ require '../phpmailer/PHPMailer.php';
 require '../phpmailer/SMTP.php';
 require '../phpmailer/Exception.php';
 
+
 // Instantiation and passing `true` enables exceptions
-$mail = new PHPMailer\PHPMailer\PHPMailer();
+$mail = new PHPMailer\PHPMailer\PHPMailer;
 
 try {
     //Server settings
@@ -17,23 +18,28 @@ try {
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'devtrane@gmail.com';                     // SMTP username
-    $mail->Password   = '0e0nZN15';                               // SMTP password
+    $mail->Username   = 'tranedev@gmail.com';                     // SMTP username
+    $mail->Password   = 'rzydivxktjgzqtah';                               // SMTP password
     $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-    $mail->Port       = 465;                                    // TCP port to connect to
+    $mail->Port       = 465;    
+    $mail->CharSet = 'UTF-8';                                // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('devtrane@gmail.com', 'Егор' );
-    $mail->addAddress('devtrane@gmail.com');     // Add a recipient
+    $mail->setFrom('tranedev@gmail.com');
+    $mail->addAddress('tranedev@gmail.com');     // Add a recipient
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
-    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}. Его почта: ${userEmail}";
+    $mail->Body    = "Имя пользователя: ${userName}, его телефон: ${userPhone}.";
 
-    $mail->send();
-    header('Location: thanks.html');
+    // проверка отправки формы
+    if ($mail->send()) {
+        echo "Форма успешно отправлена";
+    } else {
+        echo "Сообщение не было отправлено. Неверно указаны настройки вашей почты";
+    }
 } catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
-?> 
+?>

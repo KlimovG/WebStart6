@@ -26,13 +26,17 @@ $(document).ready(function () {
       closeBtn = $('.modal__close');
       
   modalBtn.on('click', function () {
-    modal.toggleClass('modal--visible')
+    modal.toggleClass('modal--visible');
+    $('form'). find('input'). val("") ;
   });
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible')
   });
 
 });
+
+
+
 // Scroll up
 $(document).ready(function(){
   $('body').append('<a href="#" class="button__scroll-up">листайте вверх</a>');
@@ -320,7 +324,21 @@ $('.modal__form').validate ({
     }
   },
   errorElement: "div",
-
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "php/send-modal.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        console.log('Ajax сработал. Ответ Сервера: ' + response);
+        $(form)[0].reset();
+        $('.modal__title').addClass('modal--unvisible');
+        $('.modal__form').addClass('modal--unvisible');
+        $('.modal__title-secondary').removeClass('modal--visible');
+        $('.modal__title-secondary').addClass('modal--visible');
+      }
+    });
+  }
   
 });
 // Form validations
@@ -344,6 +362,20 @@ $('.control__form').validate ({
     userPhoneControl: "Телефон обязателен",
   },
   errorElement: "div",
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "php/send-control.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        console.log('Ajax сработал. Ответ Сервера: ' + response);
+        $(form)[0].reset();
+        $('.control__form').addClass('modal--unvisible');
+        $('.control__message').removeClass('modal--unvisible');
+        $('.control__message').addClass('modal--visible');
+      }
+    });
+  }
 });
 // Form validations
 $('.footer__form').validate ({
@@ -377,12 +409,55 @@ $('.footer__form').validate ({
     },
   },
   errorElement: "div",
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "php/send-footer.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        // const modal = document.querySelector('.modal');
+        // var message = document.querySelector('.message');
+        console.log('Ajax сработал. Ответ Сервера: ' + response);
+        $(form)[0].reset();
+        $('.footer__title').addClass('modal--unvisible');
+        $('.footer__form').addClass('modal--unvisible');
+        $('.footer__message').removeClass('modal--unvisible');
+        $('.footer__message').addClass('modal--visible');
+        // $('.message').addClass('message--visible');
+      }
+    }); 
+  }
 });
 // Mask plugin
 $(document).ready(function(){
   $('[type="tel"]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 });
+// Close Message after form 
+toggleMessage = () => {
+  // const message = $('.message');
+  const message = document.querySelector('.message');
+        message.addEventListener('click', (event) => {
+          let target = event.target;
+          if (target.classList.contains('message') && !target.classList.contains('modal__dialog')) {
+            hideMessage();
+          }
+        });
+        hideMessage = () => {
+          message.classList.remove('message--visible');
+        };
+        document.onkeydown = function(evt) {
+    
+          if (evt.keyCode == 27) {
+            message.classList.remove('message--visible');
+          }
+        };
 
+        closeBtn = $('.message__close');
+        closeBtn.on('click', function () {
+          message.classList.remove('message--visible');
+        });
+};
+toggleMessage();
 // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
     ymaps.ready(init);
@@ -400,7 +475,7 @@ $(document).ready(function(){
       });
       var myPlacemark = new ymaps.Placemark([47.244734, 39.723227], {}, {
         iconLayout: 'default#image',
-        iconImageHref: '../img/map.svg',
+        iconImageHref: 'img/map.svg',
         iconImageSize: [30, 30],
         iconImageOffset: [-15, -15]
       });

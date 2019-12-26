@@ -78,6 +78,196 @@
   .footer
     &__wrap
       margin-top: 0
+@media screen and ( max-width: 770px )
+  .display-yes
+    display: none
+  .display-none
+    display: list-item
+  .design__row 
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  .design__col
+    flex-basis: 32%
+    z-index: 1
+  .design
+    position: relative
+    background-color: #fff
+    // background-image: url('../img/design-bg.svg')
+    background-position: center center
+    // background: $light url('../img/Rectangle 11.2.png')
+    background-size: 50% 50%
+    padding-bottom: 0
+    color: $dark
+    &::before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 48%
+      bottom: 0
+      z-index: -1
+      background-color: $dark
+
+    &__description
+      color: $dark
+      font-size: 1.4rem
+      max-width: 52rem
+      margin-top: 1.4rem
+      margin-bottom: 3.2rem
+      letter-spacing: 0.15px
+      line-height: 1.4
+    &__section-title
+      color: $dark
+    &__card
+      &-image
+        display: block
+        width: 98%
+        margin: auto
+      &-text
+        position: relative
+        max-width: 23.6rem
+        margin: 0
+        margin-top: -9.1rem
+        padding: 1.79rem 2.14rem
+        background-color: #fff
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+      &-title
+          font-family: 'Yeseva One', cursive
+          font-size: 1.29rem
+          margin-top: 0
+          margin-bottom: 0.7rem
+      &-list
+        padding: 0 0 0 1.5rem
+        margin: 0
+        margin-bottom: 2.5rem
+        font-size: 1.2rem
+        line-height: 1.81rem
+        color: $secondary
+      &-pricetag
+        position: absolute
+        left: 0
+        bottom: -1.4rem
+        min-width: 9.285rem
+        font-size: 1.29rem
+        font-family: 'Yeseva One', cursive
+        text-transform: uppercase
+        text-align: left
+        background-color: $primary
+        color: $light
+        padding: 1.214rem 2.5rem 1.214rem 2.3rem
+
+  .design
+    &__card
+      &-pricetag
+        min-width: 16.285rem
+        padding-right: 5.6rem
+  .types
+    & .col
+      &-30
+        width: 95%
+    & .row
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+  .types
+    &__card
+      margin-bottom: 5rem
+  .card
+    &__image
+      display: block
+      width: 100%
+      margin: auto
+    &__text
+      position: relative
+      max-width: 22rem
+      margin: 0
+      margin-top: -9.1rem
+      padding: 1.79rem 2.14rem
+      background-color: #fff
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+    &-title
+      font-family: 'Yeseva One', cursive
+      font-size: 1.29rem
+      margin-top: 0
+      margin-bottom: 0.7rem
+    &-list
+      padding: 0 0 0 1rem
+      margin: 0
+      margin-bottom: 2.5rem
+      font-size: 1.07rem
+      line-height: 1.79rem
+      color: $secondary
+    &-pricetag
+      position: absolute
+      left: 0
+      bottom: -1.79rem
+      font-size: 1.29rem
+      font-family: 'Yeseva One', cursive
+      text-transform: uppercase
+      background-color: $primary
+      color: $light
+      padding: 1.214rem 2.6rem
+  .row
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+  .container
+    width: 95%
+  .col
+    &-30
+      width: 95%
+    &-50
+      width: 95%
+  .button
+    &__scroll
+      &-up
+        display: none !important
+  .team
+    background-color: $dark
+    padding-top: 10rem
+    padding-bottom: 1.1rem
+    margin-top: -9rem
+    font-size: 2rem
+    letter-spacing: 1.6px
+    &__text
+      display: none
+    &__description
+      font-size: 1.03rem
+      letter-spacing: 0.3px
+      width: 93%
+    &__row
+      justify-content: space-between
+    &-card
+      position: relative
+      margin: 0.4rem auto
+      // height: 30rem
+      margin-bottom: 25rem
+      width: 86%
+      margin-left: 2.8rem
+      &__role
+        padding-top: 0
+        letter-spacing: 0.1px
+        font-size: 1.35rem
+      &__name
+        padding-top: 1.2rem
+        font-size: 1.2rem
+        letter-spacing: 1.25px
+      &__group
+        bottom: -11rem
+        left: 12%
+        width: 76%
+      &__image
+        width: 100%
+      &--first
+        &::before
+          width: 70px
+      &--second
+        &::before
+          width: 70px
+      &--third
+        &::before
+          width: 70px
+  
 @media screen and ( max-width: 570px )
   html
     font-size: 14px
@@ -135,6 +325,15 @@
       background-color: $primary
       color: $light
       padding: 1.214rem 2.6rem
+
+
+  .team
+    &-card
+      &__group
+        bottom: -18rem
+        left: 12%
+        width: 76%
+
   .section
     &-title
       text-align: center
@@ -196,51 +395,51 @@
 
   .control
   
-  .team
-    background-color: $dark
-    padding-top: 10rem
-    padding-bottom: 1.1rem
-    margin-top: -9rem
-    font-size: 2rem
-    letter-spacing: 1.6px
-    &__text
-      display: none
-    &__description
-      font-size: 1.03rem
-      letter-spacing: 0.3px
-      width: 93%
-    &__row
-      justify-content: space-between
-    &-card
-      position: relative
-      margin: 0.4rem auto
-      height: 30rem
-      margin-bottom: 25rem
-      width: 86%
-      margin-left: 2.8rem
-      &__role
-        padding-top: 0
-        letter-spacing: 0.1px
-        font-size: 1.35rem
-      &__name
-        padding-top: 1.2rem
-        font-size: 1.2rem
-        letter-spacing: 1.25px
-      &__group
-        bottom: -18rem
-        left: 12%
-        width: 76%
-      &__image
-        width: 100%
-      &--first
-        &::before
-          width: 70px
-      &--second
-        &::before
-          width: 70px
-      &--third
-        &::before
-          width: 70px
+  // .team
+  //   background-color: $dark
+  //   padding-top: 10rem
+  //   padding-bottom: 1.1rem
+  //   margin-top: -9rem
+  //   font-size: 2rem
+  //   letter-spacing: 1.6px
+  //   &__text
+  //     display: none
+  //   &__description
+  //     font-size: 1.03rem
+  //     letter-spacing: 0.3px
+  //     width: 93%
+  //   &__row
+  //     justify-content: space-between
+  //   &-card
+  //     position: relative
+  //     margin: 0.4rem auto
+  //     height: 30rem
+  //     margin-bottom: 25rem
+  //     width: 86%
+  //     margin-left: 2.8rem
+  //     &__role
+  //       padding-top: 0
+  //       letter-spacing: 0.1px
+  //       font-size: 1.35rem
+  //     &__name
+  //       padding-top: 1.2rem
+  //       font-size: 1.2rem
+  //       letter-spacing: 1.25px
+  //     &__group
+  //       bottom: -18rem
+  //       left: 12%
+  //       width: 76%
+  //     &__image
+  //       width: 100%
+  //     &--first
+  //       &::before
+  //         width: 70px
+  //     &--second
+  //       &::before
+  //         width: 70px
+  //     &--third
+  //       &::before
+  //         width: 70px
   .clients
     display: none
   .footer
@@ -302,86 +501,11 @@
     &__scroll-up
       display: none
 
-      
  
 // Media for design section MOBILE FIRST !!!
-@media screen and ( min-width: 570px )
-  .display-yes
-    display: none
-  .display-none
-    display: block
-  .design__row 
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
-  .design__col
-    flex-basis: 32%
-    z-index: 1
-  .design
-    position: relative
-    background-color: #fff
-    // background-image: url('../img/design-bg.svg')
-    background-position: center center
-    // background: $light url('../img/Rectangle 11.2.png')
-    background-size: 50% 50%
-    padding-bottom: 0
-    color: $dark
-    &::before
-      position: absolute
-      content: ''
-      width: 100%
-      height: 48%
-      bottom: 0
-      z-index: -1
-      background-color: $dark
 
-    &__description
-      color: $dark
-      font-size: 1.4rem
-      max-width: 52rem
-      margin-top: 1.4rem
-      margin-bottom: 3.2rem
-      letter-spacing: 0.15px
-      line-height: 1.4
-    &__section-title
-      color: $dark
-    &__card
-      &-image
-        display: block
-        width: 98%
-        margin: auto
-      &-text
-        position: relative
-        max-width: 23.6rem
-        margin: 0 auto
-        margin-top: -9.1rem
-        padding: 1.79rem 2.14rem
-        background-color: #fff
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
-      &-title
-          font-family: 'Yeseva One', cursive
-          font-size: 1.29rem
-          margin-top: 0
-          margin-bottom: 0.7rem
-      &-list
-        padding: 0 0 0 1.5rem
-        margin: 0
-        margin-bottom: 2.5rem
-        font-size: 1.2rem
-        line-height: 1.81rem
-        color: $secondary
-      &-pricetag
-        position: absolute
-        left: 0
-        bottom: -1.4rem
-        min-width: 16.285rem
-        font-size: 1.29rem
-        font-family: 'Yeseva One', cursive
-        text-transform: uppercase
-        text-align: left
-        background-color: $primary
-        color: $light
-        padding: 1.214rem 5.6rem 1.214rem 2.3rem
+  
+
 
 //  media for scroll-down
 @media screen and ( max-height: 520px )

@@ -57,3 +57,80 @@
   &__section-title
     margin-bottom: 2.78rem
 
+.display-yes
+  display: none
+.display-none
+  display: list-item
+.design__row 
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+.design__col
+  flex-basis: 32%
+  z-index: 1
+.design
+  position: relative
+  background-color: #fff
+  // background-image: url('../img/design-bg.svg')
+  background-position: center center
+  // background: $light url('../img/Rectangle 11.2.png')
+  background-size: 50% 50%
+  padding-bottom: 0
+  color: $dark
+  &::before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 48%
+    bottom: 0
+    z-index: -1
+    background-color: $dark
+
+  &__description
+    color: $dark
+    font-size: 1.4rem
+    max-width: 52rem
+    margin-top: 1.4rem
+    margin-bottom: 3.2rem
+    letter-spacing: 0.15px
+    line-height: 1.4
+  &__section-title
+    color: $dark
+  &__card
+    &-image
+      display: block
+      width: 98%
+      margin: auto
+    &-text
+      position: relative
+      max-width: 23.6rem
+      margin: 0 auto
+      margin-top: -9.1rem
+      padding: 1.79rem 2.14rem
+      background-color: #fff
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+    &-title
+        font-family: 'Yeseva One', cursive
+        font-size: 1.29rem
+        margin-top: 0
+        margin-bottom: 0.7rem
+    &-list
+      padding: 0 0 0 1.5rem
+      margin: 0
+      margin-bottom: 2.5rem
+      font-size: 1.2rem
+      line-height: 1.81rem
+      color: $secondary
+    &-pricetag
+      position: absolute
+      left: 0
+      bottom: -1.4rem
+      min-width: 9.285rem
+      font-size: 1.29rem
+      font-family: 'Yeseva One', cursive
+      text-transform: uppercase
+      text-align: left
+      background-color: $primary
+      color: $light
+      padding: 1.214rem 2.5rem 1.214rem 2.3rem
+
