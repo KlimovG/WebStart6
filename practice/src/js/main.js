@@ -284,7 +284,7 @@ $(document).ready(function() {
 });
 
 
-// Form validations
+// Form validation
 $('.modal__form').validate ({
   errorClass: "invalid" ,
   rules: {
@@ -341,7 +341,7 @@ $('.modal__form').validate ({
   }
   
 });
-// Form validations
+// Form validation
 $('.control__form').validate ({
   errorClass: "invalid" ,
   rules: {
@@ -377,7 +377,7 @@ $('.control__form').validate ({
     });
   }
 });
-// Form validations
+// Form validation
 $('.footer__form').validate ({
   errorClass: "invalid" ,
   rules: {
@@ -458,9 +458,17 @@ toggleMessage = () => {
         });
 };
 toggleMessage();
+// отложенная загрузка яндекс карт
+setTimeout(function(){
+  const elemYa = document.createElement('script');
+  elemYa.async = true;
+	elemYa.type = 'text/javascript';
+	elemYa.src = '//api-maps.yandex.ru/2.1/?apikey=b1919ead-ea00-4f73-b766-af76a6ac6c6e&lang=ru_RU&onload=init';
+	document.getElementsByTagName('body')[0].appendChild(elemYa);
+}, 3000);
 // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-    ymaps.ready(init);
+    // ymaps.ready(init);
     function init(){
       // Создание карты.
       var myMap = new ymaps.Map("map", {
@@ -479,7 +487,7 @@ toggleMessage();
         iconImageSize: [30, 30],
         iconImageOffset: [-15, -15]
       });
-      var myGeoObject = new ymaps.GeoObject({
+      let myGeoObject = new ymaps.GeoObject({
         geometry: {
             type: "Point", // тип геометрии - точка
             coordinates: [47.244734, 39.723227] // координаты точки

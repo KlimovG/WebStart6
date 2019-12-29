@@ -2,12 +2,14 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=b1919ead-ea00-4f73-b766-af76a6ac6c6e&lang=ru_RU" type="text/javascript">
+  </script>
   <title>Турецкий ремонт</title>
 </head>
 <body>
@@ -191,8 +193,8 @@
           <!-- /.section-title__image  -->
         </div>
         <!-- /.section-title -->
-        <div class="control__video video ">
-          <img src="img/play-icon.svg" alt="" class="video__play ">
+        <div class="control__video video">
+          <img src="img/play-icon.svg" alt="" class="video__play">
         </div>
         <!-- /.control__video -->
         <p class="control__text">
@@ -204,12 +206,12 @@
             <input type="text" name="userNameControl" class="input form__input control__input input--dark" id="user-name" placeholder="Как вас зовут">
           </div>
           <div class="input-group control__input-group">
-            <label for="user-phone"  class="label control__label form__label label--dark">Телефон</label>
+            <label for="user-phone" class="label control__label form__label label--dark">Телефон</label>
             <input type="tel" name="userPhoneControl" class="input form__input control__input input--dark" id="user-phone" placeholder="Ваш номер телефона">
           </div>
           <button class="button button--primary control__button button__modal">Отправить</button>
           <div class="policy control__policy">
-            <input type="checkbox" class="policy__checkbox" name="policy-checkbox-control" id="policy-checkbox-control" >
+            <input type="checkbox" class="policy__checkbox" name="policy-checkbox-control" id="policy-checkbox-control">
             <label for="policy-checkbox-control" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- ./policy -->
@@ -233,7 +235,7 @@
         </div>
         <!-- /.section-title -->
         <div class="row">
-          <div class="col-30 " id="types30Left">
+          <div class="col-30" id="types30Left">
             <div class="card types__card">
               <img src="img/type-1.jpg" alt="Косметический ремонт" class="card__image">
               <div class="card__text">
@@ -265,7 +267,7 @@
             <!-- /.card -->
           </div>
           <!-- /.col-30 -->
-          <div class="col-30 " id="types30Center">
+          <div class="col-30" id="types30Center">
             <div class="card types__card">
               <img src="img/type-2.jpg" alt="" class="card__image">
               <div class="card__text">
@@ -297,7 +299,7 @@
             <!-- /.card -->
           </div>
           <!-- /.col-30 -->
-          <div class="col-30 " id="types30Right">
+          <div class="col-30" id="types30Right">
             <div class="card types__card">
               <img src="img/type-3.jpg" alt="" class="card__image">
               <div class="card__text">
@@ -335,7 +337,7 @@
       <!-- /.container -->
     </section>
     <!-- /.section types-->
-    <section class="section  design">
+    <section class="section design">
       <div class="container">
         <div class="section-title design__section-title">
           <h2 class="section-title__heading design__heading">Дизайн проект</h2>
@@ -380,7 +382,7 @@
           </div>
           <!-- /.col-30 -->
           <div class="design__col col-30" id="des30Center">
-            <div class=" design__card">
+            <div class="design__card">
               <img src="img/design-2.jpg" alt="" class="design__card-image">
               <div class="design__card-text">
                 <h3 class="design__card-title">Стандартный</h3>
@@ -470,7 +472,7 @@
               <!-- Swiper -->
               <!-- Slider main container -->
               <div class="steps__swiper-container2 swiper-container">
-                  <div class=" steps-slide__pagination3 steps__counter"></div>
+                  <div class="steps-slide__pagination3 steps__counter"></div>
                   <!-- Additional required wrapper -->
                   <div class="swiper-wrapper swiper-no-swiping">
                     <!-- Slides -->
@@ -770,11 +772,11 @@
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="php/send-footer.php" method="POST" class="form footer__form modal__form'" id="footer__form">
           <div class="input-group footer__input-group">
-            <label for="user-name-footer"  class="label form__label label-light">Имя</label>
+            <label for="user-name-footer" class="label form__label label-light">Имя</label>
             <input type="text" name="userNameFooter" class="input input--light form__input footer__input" id="user-name-footer" placeholder="Как вас зовут">
           </div>
           <div class="input-group footer__input-group">
-            <label for="user-phone"  class="label form__label label-light">Телефон</label>
+            <label for="user-phone" class="label form__label label-light">Телефон</label>
             <input type="tel" name="userPhoneFooter" class="input input--light form__input footer__input" id="user-phone-footer" placeholder="Ваш номер телефона">
           </div>
           <div class="input-group footer__input-group footer__input-group--third footer__input-group--full-width">
@@ -782,7 +784,7 @@
             <input type="text" name="userTextFooter" class="input input--light form__input footer__input" placeholder="Я хочу спросить: ">
           </div>
           <div class="policy footer__policy">
-              <input type="checkbox" class="policy__checkbox" name="policy-checkbox-footer" id="policy-checkbox-footer" >
+              <input type="checkbox" class="policy__checkbox" name="policy-checkbox-footer" id="policy-checkbox-footer">
               <label for="policy-checkbox-footer" class="policy__label policy__label--center">Я соглашаюсь с обработкой данных</label>
           </div>
           <!-- ./policy -->
@@ -859,7 +861,7 @@
             <input type="email" name="userEmailModal" class="input input--light form__input modal__input" id="user-email-modal" placeholder="Ваш E-Mail">
         </div>
         <div class="policy modal__policy">
-            <input type="checkbox" class="policy__checkbox" name="policy-checkbox-modal" id="policy-checkbox-modal" >
+            <input type="checkbox" class="policy__checkbox" name="policy-checkbox-modal" id="policy-checkbox-modal">
             <label for="policy-checkbox-modal" class="policy__label">Я соглашаюсь с обработкой данных</label>
         </div>
         <!-- ./policy -->
@@ -871,7 +873,7 @@
   </div>
   <!-- /.modal -->
   <!-- Message after modal window-->
-  <div class="message ">
+  <div class="message">
     <div class="message__dialog">
       <button class="message__close"></button>
       <!-- /.message__close -->
@@ -880,16 +882,11 @@
     </div>
     <!-- /.message__dialog -->
   </div>
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
-  <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=b1919ead-ea00-4f73-b766-af76a6ac6c6e&lang=ru_RU" type="text/javascript">
-  </script> -->
   <script src="js/main.js"></script>
 
 </body>
