@@ -335,6 +335,87 @@
       <!-- /.container -->
     </section>
     <!-- /.section types-->
+    <!-- section advantages start -->
+    <section class="section advantages section--light">
+      <div class="container">
+        <div class="row advantages__row">
+          <div class="col-60 advantages__col-advantage">
+            <div class="advantages__block">
+              <div class="advantages__item">
+                <div class="advantages__circle"><span class="advantages__number">01</span></div>
+                <!-- /.advantages__circle -->
+                <span class="advantages__advantage">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</span>
+                <!-- /.advantages__advantage -->
+              </div>
+              <!-- /.advantages__item -->
+              <div class="advantages__item">
+                <div class="advantages__circle"><span class="advantages__number">02</span></div>
+                <!-- /.advantages__circle -->
+                <span class="advantages__advantage">Бесплатный замер</span>
+                <!-- /.advantages__advantage -->
+              </div>
+              <!-- /.advantages__item -->
+              <div class="advantages__item">
+                <div class="advantages__circle"><span class="advantages__number">03</span></div>
+                <!-- /.advantages__circle -->
+                <span class="advantages__advantage">Бесплатная консультация</span>
+                <!-- /.advantages__advantage -->
+              </div>
+              <!-- /.advantages__item -->
+              <div class="advantages__item">
+                <div class="advantages__circle"><span class="advantages__number">04</span></div>
+                <!-- /.advantages__circle -->
+                <span class="advantages__advantage">Получите смету расходов и сроки вашего будущего ремонта</span>
+                <!-- /.advantages__advantage -->
+              </div>
+              <!-- /.advantages__item -->
+            </div>
+            <!-- /.advantages__block -->
+          </div>
+          <!-- /.col-60 -->
+          <div class="col-40 advantages__col-form">
+            <div class="advantages-form__dialog">
+              <h3 class="advantages-form__title">Оставьте заявку на бесплатный <br> выезд замерщика</h3>
+              <h3 class="advantages-form__title-secondary modal--unvisible text-align--center">Форма отправлена, наш менеджер свяжется с вами через 30 минут. А во время ожидания, предлагаем вам посмотреть нашу группу <a href="https://vk.com/public190136265" class="message__link">Вконтакте</a></h3>
+              <form action="php/send-modal.php" method="POST" class="form modal__form advantages-form advantages__form" id="advantages-form__form">
+                <div class="input-group advantages-form__input-group">
+                  <label for="user-name-advantages" class="label form__label label-light">Имя</label>
+                  <input type="text" name="userNameModal" class="input input--light form__input advantages-form__input" id="user-name-advantages" placeholder="Как вас зовут">
+                  <div id="summary">
+        
+                  </div>
+                </div>
+                <div class="input-group advantages-form__input-group">
+                  <label for="user-phone-advantages" class="label form__label label-light">Телефон</label>
+                  <input type="tel" name="userPhoneModal" class="input input--light form__input advantages-form__input" id="user-phone-advantages" placeholder="Ваш номер телефона">
+                </div>
+                <div class="input-group advantages-form__input-group advantages-form__input-group-3">
+                    <label for="user-email-advantages" class="label form__label label-light">E-mail </label>
+                    <input type="email" name="userEmailModal" class="input input--light form__input advantages-form__input" id="user-email-advantages" placeholder="Ваш E-Mail">
+                </div>
+                <div class="policy advantages-form__policy modal__policy">
+                    <input type="checkbox" class="policy__checkbox" name="policy-checkbox-advantages" id="policy-checkbox-advantages" >
+                    <label for="policy-checkbox-advantages" class="policy__label">Я соглашаюсь с обработкой данных</label>
+                </div>
+                <!-- ./policy -->
+                <button class="button button--primary modal__button advantages-form__button">Вызвать замерщика</button>
+              </form>
+            </div>
+            <!-- /.advantages-form__dialog -->
+            <div class="advantages__economy">
+              <div class="advantages__icon"><img src="img/pig.svg" alt="coinkeeper" class="advantages__pig"></div>
+              <!-- /.advantages__icon -->
+              <span class="advantages__info">Это поможет сэкономить 10 - 20% <br> от стоимости материалов</span>
+            </div>
+            <!-- /.advantages__economy -->
+          </div>
+          <!-- /.col-40 -->
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section advantages-->
+    section.
     <section class="section  design">
       <div class="container">
         <div class="section-title design__section-title">
@@ -606,7 +687,6 @@
     <!-- /.section steps section--dark -->
     <!-- section team start -->
     <section class="section team team__section">
-       
       <div class="container">
         <div class="section-title team__section-title section-title--light">
           <h2 class="section-title__heading team__heading">Наша команда</h2>
@@ -774,12 +854,12 @@
             <input type="text" name="userNameFooter" class="input input--light form__input footer__input" id="user-name-footer" placeholder="Как вас зовут">
           </div>
           <div class="input-group footer__input-group">
-            <label for="user-phone"  class="label form__label label-light">Телефон</label>
+            <label for="user-phone-footer"  class="label form__label label-light">Телефон</label>
             <input type="tel" name="userPhoneFooter" class="input input--light form__input footer__input" id="user-phone-footer" placeholder="Ваш номер телефона">
           </div>
           <div class="input-group footer__input-group footer__input-group--third footer__input-group--full-width">
-            <label for="user-question" class="label form__label label-light">Вопрос </label>
-            <input type="text" name="userTextFooter" class="input input--light form__input footer__input" placeholder="Я хочу спросить: ">
+            <label for="user-question-footer" class="label form__label label-light">Вопрос </label>
+            <input type="text" name="userTextFooter" class="input input--light form__input footer__input" id="user-question-footer" placeholder="Я хочу спросить: ">
           </div>
           <div class="policy footer__policy">
               <input type="checkbox" class="policy__checkbox" name="policy-checkbox-footer" id="policy-checkbox-footer" >

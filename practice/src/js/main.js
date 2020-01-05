@@ -289,36 +289,93 @@ $('.modal__form').validate ({
   errorClass: "invalid" ,
   rules: {
     // simple rule, converted to {required:true}
-    userName: {
+    userNameModal: {
       required: true,
       minlength: 2,
       maxlength: 15,
     },
-    userText: {
+    userTextModal: {
       required: true,
       minlength: 20,
       maxlength: 300,
     },
-    userPhone: "required",
+    userPhoneModal: "required",
     // compound rule
-    userEmail: {
+    userEmailModal: {
       required: true,
       email: true
     }
   },
   messages: {
-    userName: {
+    userNameModal: {
       required:"Имя обязательно",
       minlength: "Имя не короче 2 букв",
       maxlength: "Имя не длинее 15 букв",
     },           
-    userPhone: "Телефон обязателен",
-    userText: {
+    userPhoneModal: "Телефон обязателен",
+    userTextModal: {
       required:"Напишите ваш вопрос",
       minlength: "Текст не короче 20 букв",
       maxlength: "Текст не длинее 300 букв",
     },
-    userEmail: {
+    userEmailModal: {
+      required: "Заполните поле",
+      email: "Введите в формате: name@domain.com"
+    }
+  },
+  errorElement: "div",
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "php/send-modal.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        console.log('Ajax сработал. Ответ Сервера: ' + response);
+        $(form)[0].reset();
+        $('.modal__title').addClass('modal--unvisible');
+        $('.modal__form').addClass('modal--unvisible');
+        $('.modal__title-secondary').removeClass('modal--visible');
+        $('.modal__title-secondary').addClass('modal--visible');
+      }
+    });
+  }
+  
+});
+// Form validation
+$('.advantages__form').validate ({
+  errorClass: "invalid" ,
+  rules: {
+    // simple rule, converted to {required:true}
+    userNameAdvantages: {
+      required: true,
+      minlength: 2,
+      maxlength: 15,
+    },
+    userTextAdvantages: {
+      required: true,
+      minlength: 20,
+      maxlength: 300,
+    },
+    userPhoneAdvantages: "required",
+    // compound rule
+    userEmailAdvantages: {
+      required: true,
+      email: true
+    }
+  },
+  messages: {
+    userNameAdvantages: {
+      required:"Имя обязательно",
+      minlength: "Имя не короче 2 букв",
+      maxlength: "Имя не длинее 15 букв",
+    },           
+    userPhoneAdvantages: "Телефон обязателен",
+    userTextAdvantages: {
+      required:"Напишите ваш вопрос",
+      minlength: "Текст не короче 20 букв",
+      maxlength: "Текст не длинее 300 букв",
+    },
+    userEmailAdvantages: {
       required: "Заполните поле",
       email: "Введите в формате: name@domain.com"
     }
@@ -505,4 +562,4 @@ setTimeout(function(){
     //   }
     // };
     // changeHeightCard();
-    
+  
