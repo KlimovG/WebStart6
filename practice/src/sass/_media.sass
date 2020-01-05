@@ -1,14 +1,45 @@
+@media screen and ( max-width: 1300px )
+  .advantages
+    &__block
+      margin-left: -21rem
+    &__advantage
+      max-width: 24rem
+  
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px
   .nav
     &__item
       margin-right: 1rem
+  .advantages
+    &__item
+      &:nth-child(1)
+        top: 3rem
+        right: -26.5rem
+      &:nth-child(2)
+        top: 13rem
+        right: -33rem
+      &:nth-child(3)
+        bottom: 13rem
+        right: -35rem
+      &:nth-child(4)
+        bottom: -0.1rem
+        right: -29rem
 @media screen and ( max-width: 1150px )
   .clients
     &-card
       min-height: 37rem
-  
+  .advantages
+    &__block
+      margin-left: -26rem
+@media screen and ( max-width: 1050px )
+  .advantages
+    &__block
+      margin-left: -30rem
+@media screen and ( max-width: 950px )
+  .advantages
+    &__block
+      margin-left: -33rem
 @media screen and ( max-width: 992px )
   html
     font-size: 12px
@@ -58,6 +89,29 @@
           min-width: 8rem
           max-width: 9rem
 @media screen and ( max-width: 850px )
+  .row
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+  .col
+    &-30
+      width: 95%
+    &-35
+      width: 95%
+    &-39
+      width: 95%
+    &-40
+      width: 95%
+    &-50
+      width: 95%
+    &-55
+      width: 95%
+    &-60
+      width: 95%
+    &-63
+      width: 95%
+    &-70
+      width: 95%
   .team
     &-card
       &__name
@@ -74,23 +128,24 @@
       padding-top: 17rem
   .advantages
     display: none
+  .fantasy
+    display: none
   .clients
     display: none
   .footer
     &__wrap
       margin-top: 0
-@media screen and ( max-width: 770px )
   .display-yes
     display: none
   .display-none
     display: list-item
-  .design__row 
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
-  .design__col
-    flex-basis: 32%
-    z-index: 1
+  // .design__row 
+  //   display: flex
+  //   align-items: flex-start
+  //   justify-content: space-between
+  // .design__col
+  //   flex-basis: 32%
+  //   z-index: 1
   .design
     position: relative
     background-color: #fff
@@ -108,7 +163,6 @@
       bottom: 0
       z-index: -1
       background-color: $dark
-
     &__description
       color: $dark
       font-size: 1.4rem
@@ -156,12 +210,11 @@
         background-color: $primary
         color: $light
         padding: 1.214rem 2.5rem 1.214rem 2.3rem
-
-  .design
-    &__card
-      &-pricetag
-        min-width: 16.285rem
-        padding-right: 5.6rem
+  // .design
+  //   &__card
+  //     &-pricetag
+  //       min-width: 16.285rem
+  //       padding-right: 5.6rem
   .types
     & .col
       &-30
@@ -208,17 +261,7 @@
       background-color: $primary
       color: $light
       padding: 1.214rem 2.6rem
-  .row
-    flex-direction: column
-    align-items: center
-    justify-content: space-between
-  .container
-    width: 95%
-  .col
-    &-30
-      width: 95%
-    &-50
-      width: 95%
+  
   .button
     &__scroll
       &-up

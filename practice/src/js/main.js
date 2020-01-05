@@ -118,7 +118,15 @@ $(document).ready(function () {
 
   stepsNext.css('left', stepsPrev.width() + 30 + stepsBullets.width() + 20)
   stepsBullets.css('left', stepsPrev.width() + 17) 
-    // Points navigation in section steps
+
+  //  Steps swiper - image slider for steps section
+  var mySwiper4 = new Swiper ('.fantasy__swiper-container', {
+    direction: 'vertical',
+    centeredSlides: true,
+    slidesPerView: 1,
+  });
+  
+  // Navigation for slider in fantasy section
   $('.steps__item').on('click', function () {
     $('.steps__item').removeClass('active');
     $(this).addClass('active');
@@ -126,7 +134,7 @@ $(document).ready(function () {
     mySwiper2.slideTo(e)
     mySwiper3.slideTo(e)
     })
-
+  
   mySwiper2.on('slideChange', (function () {
   let e = mySwiper2.activeIndex - 0;
   if (e === 6) {e=0};
@@ -139,6 +147,20 @@ $(document).ready(function () {
     if (e === 6) {e=0};
     $('.steps__item').removeClass('active');
     $('.steps__item').eq(e).addClass('active');
+    }))
+
+  // Points navigation in section steps
+  $('.fantasy__item').on('click', function () {
+    $('.fantasy__item').removeClass('fantasy__item--active');
+    $(this).addClass('fantasy__item--active');
+    const e = $(this).data('index');
+    mySwiper4.slideTo(e)
+    })
+  mySwiper4.on('slideChange', (function () {
+    let e = mySwiper4.activeIndex - 0;
+    if (e === 11) {e=0};
+    $('.fantasy__item').removeClass('fantasy__item--active');
+    $('.fantasy__item').eq(e).addClass('fantasy__item--active');
     }))
 });
 
